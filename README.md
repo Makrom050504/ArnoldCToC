@@ -1,37 +1,23 @@
 # ArnoldC to C Compiler
 ## Dane zespołu
-Maksymilian Roman - 
+Maksymilian Roman -  
 Szymon Lipiński - slipinski@student.agh.edu.pl
 ## Założenia programu
 
 ### Ogólne cele
-Celem projektu jest implementacja kompilatora języka **ArnoldC**, który dokonuje translacji programów zapisanych w tym języku do równoważnego kodu w języku **C**. Projekt ma umożliwiać analizę składniową i semantyczną kodu źródłowego ArnoldC, a następnie generowanie poprawnego kodu wynikowego w języku C, zachowującego logikę i strukturę programu wejściowego.
-
-Program ma stanowić narzędzie demonstracyjne pokazujące proces budowy translatora języków programowania – od etapu tokenizacji i parsowania, przez konstrukcję reprezentacji pośredniej, aż po generację kodu docelowego.
+Celem programu jest przekonwertowanie kodu w języku ArnoldC do języka C  
 
 ### Rodzaj translatora
-**Kompilator**
+Kompilator
 
 ### Planowany wynik działania programu
-Efektem działania programu będzie **konwerter języka ArnoldC do języka C**, który:
-- wczytuje kod źródłowy zapisany w ArnoldC,
-- przeprowadza analizę leksykalną i składniową,
-- buduje wewnętrzną reprezentację programu,
-- generuje równoważny kod w języku C.
-
-Wynikowy kod C będzie można następnie skompilować przy użyciu standardowego kompilatora, np. `gcc`.
+Efektem działania programu będzie konwerter języka ArnoldC do języka C
 
 ### Planowany język implementacji
-**Python**
+Python
 
 ### Sposób realizacji skanera/parsera
-Do realizacji skanera i parsera zostanie wykorzystany **generator parserów ANTLR4**.  
-ANTLR4 posłuży do:
-- definicji reguł leksykalnych odpowiadających tokenom języka ArnoldC,
-- zdefiniowania gramatyki opisującej poprawne konstrukcje składniowe,
-- wygenerowania parsera umożliwiającego budowę drzewa składniowego programu.
-
-Na podstawie wygenerowanego drzewa składniowego program będzie wykonywał translację do języka C.
+ANTLR4
 
 ---
 
