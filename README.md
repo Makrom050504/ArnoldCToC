@@ -48,10 +48,5 @@ Poniższa tabela przedstawia przykładowe grupy tokenów wykorzystywanych w anal
 | Wartości stałe | liczby całkowite, identyfikatory, wartości logiczne | Podstawowe elementy używane w programie |
 | Symbole pomocnicze | nawiasy, separatory, operatory | Elementy pomocnicze składni niezbędne do analizy programu |
 
-> Ostateczny zestaw tokenów zależy od zakresu obsługiwanego podzbioru języka ArnoldC przyjętego w projekcie.
-
 ---
 
-
-```text
-grammar/ArnoldC.g4
