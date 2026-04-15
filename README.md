@@ -1,6 +1,8 @@
 # ArnoldC to C Compiler
-
-## 2. Założenia programu
+## Dane zespołu
+Maksymilian Roman - 
+Szymon Lipiński - slipinski@student.agh.edu.pl
+## Założenia programu
 
 ### Ogólne cele
 Celem projektu jest implementacja kompilatora języka **ArnoldC**, który dokonuje translacji programów zapisanych w tym języku do równoważnego kodu w języku **C**. Projekt ma umożliwiać analizę składniową i semantyczną kodu źródłowego ArnoldC, a następnie generowanie poprawnego kodu wynikowego w języku C, zachowującego logikę i strukturę programu wejściowego.
