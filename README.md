@@ -52,9 +52,6 @@ Poniższa tabela przedstawia przykładowe grupy tokenów wykorzystywanych w anal
 
 ---
 
-## 4. Gramatyka projektu
-
-Gramatyka projektu zostanie zdefiniowana w formacie **ANTLR4** i umieszczona w pliku, np.:
 
 ```text
 grammar/ArnoldC.g4
