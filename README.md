@@ -1,6 +1,6 @@
 # ArnoldC to C Compiler
 ## Dane zespołu
-Maksymilian Roman -  
+Maksymilian Roman - mroman@student.agh.edu.pl
 Szymon Lipiński - slipinski@student.agh.edu.pl
 ## Założenia programu
 
