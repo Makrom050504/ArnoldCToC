@@ -21,7 +21,7 @@ ANTLR4
 
 ---
 
-## 3. Opis tokenów
+## Opis tokenów
 
 Poniższa tabela przedstawia przykładowe grupy tokenów wykorzystywanych w analizie leksykalnej języka ArnoldC.
 
