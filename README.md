@@ -2,7 +2,7 @@
 
 ## Dane zespołu
 
-Maksymilian Roman - [mroman@student.agh.edu.pl](mailto:mroman@student.agh.edu.pl)
+Maksymilian Roman - [mroman@student.agh.edu.pl](mailto:mroman@student.agh.edu.pl)  
 Szymon Lipiński - [slipinski@student.agh.edu.pl](mailto:slipinski@student.agh.edu.pl)
 
 ---
