@@ -123,9 +123,7 @@ Poniżej znajduje się szczegółowy podział tokenów używanych w języku Arno
 
 ## Gramatyka ANTLR4
 
-Poniżej znajduje się przykładowa gramatyka języka ArnoldC.
 
-### Plik: `ArnoldC.g4`
 
 ```antlr
 grammar ArnoldC;
