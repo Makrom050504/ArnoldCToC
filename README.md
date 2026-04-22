@@ -168,7 +168,7 @@ ANTLR4
 
 
 ### Plik: `ArnoldC.g4`
-[ArnoldC](ArnoldC.g4)
+[ArnoldC.g4](ArnoldC.g4)
 
 
 
