@@ -128,8 +128,6 @@ Poniżej znajduje się szczegółowy podział tokenów używanych w języku Arno
 ```antlr
 grammar ArnoldC;
 
-// ===== Parser rules =====
-
 program
     : START statement* END EOF
     ;
@@ -175,44 +173,37 @@ expression
     | '(' expression ')'
     ;
 
-// ===== Lexer rules =====
 
-// Program structure
+
 START  : 'IT\'S SHOWTIME';
 END    : 'YOU HAVE BEEN TERMINATED';
 
-// I/O
+
 PRINT  : 'TALK TO THE HAND';
 
-// Variables
+
 DECLARE : 'HEY CHRISTMAS TREE';
 ASSIGN  : 'YOU SET US UP';
 
-// Arithmetic
 ADD : 'GET UP';
 SUB : 'GET DOWN';
 MUL : 'YOU\'RE FIRED';
 DIV : 'HE HAD TO SPLIT';
 
-// Logic
 EQ  : 'YOU ARE NOT YOU YOU ARE ME';
 GT  : 'LET OFF SOME STEAM BENNET';
 NEQ : 'CONSIDER THAT A DIVORCE';
 
-// Control flow
 IF    : 'BECAUSE I\'M GOING TO SAY PLEASE';
 ELSE  : 'BULLSHIT';
 ENDIF : 'YOU HAVE NO RESPECT FOR LOGIC';
 
-// Loop
 LOOP    : 'STICK AROUND';
 ENDLOOP : 'CHILL';
 
-// Values
 NUMBER : [0-9]+;
 IDENTIFIER : [a-zA-Z_][a-zA-Z_0-9]*;
 
-// Whitespace
 WS : [ \t\r\n]+ -> skip;
 ```
 
