@@ -11,15 +11,19 @@ Szymon Lipiński - [slipinski@student.agh.edu.pl](mailto:slipinski@student.agh.e
 
 ### Ogólne cele
 
-Celem programu jest przekonwertowanie kodu w języku ArnoldC do języka C.
+Celem programu jest stworzenie kompilatora (translatora źródło–źródło), który przekształca kod napisany w języku ArnoldC do równoważnego kodu w języku C.
 
 ### Rodzaj translatora
 
-Kompilator (translator źródło–źródło).
+Kompilator (source-to-source compiler)
 
 ### Planowany wynik działania programu
 
-Efektem działania programu będzie narzędzie przyjmujące kod ArnoldC i generujące równoważny kod w języku C.
+Efektem działania programu będzie narzędzie:
+
+* przyjmujące kod ArnoldC jako wejście,
+* generujące poprawny składniowo i semantycznie kod w języku C,
+* umożliwiające dalszą kompilację przy użyciu standardowego kompilatora C (np. `gcc`).
 
 ### Planowany język implementacji
 
@@ -31,9 +35,7 @@ ANTLR4
 
 ---
 
-## Opis tokenów
-
-Poniżej znajduje się szczegółowy podział tokenów używanych w języku ArnoldC wraz z ich znaczeniem i przykładowym odwzorowaniem.
+## Opis tokenów 
 
 ### 1. Struktura programu
 
@@ -48,16 +50,23 @@ Poniżej znajduje się szczegółowy podział tokenów używanych w języku Arno
 
 | Token              | Opis               | Odpowiednik w C |
 | ------------------ | ------------------ | --------------- |
-| `TALK TO THE HAND` | Wypisanie wartości | `printf`        |
+| `TALK TO THE HAND` | Wypisanie wartości | `printf(...)`   |
 
 ---
 
 ### 3. Deklaracje i przypisania
 
-| Token                | Opis                 | Odpowiednik w C |
-| -------------------- | -------------------- | --------------- |
-| `HEY CHRISTMAS TREE` | Deklaracja zmiennej  | `int x;`        |
-| `YOU SET US UP`      | Przypisanie wartości | `x = ...;`      |
+| Token                | Opis                                     | Odpowiednik w C |
+| -------------------- | ---------------------------------------- | --------------- |
+| `HEY CHRISTMAS TREE` | Deklaracja zmiennej                      | `int x;`        |
+| `YOU SET US UP`      | Przypisanie wartości (lub inicjalizacja) | `x = ...;`      |
+
+Przykład:
+
+```arnoldc
+HEY CHRISTMAS TREE x
+YOU SET US UP 10
+```
 
 ---
 
@@ -74,21 +83,21 @@ Poniżej znajduje się szczegółowy podział tokenów używanych w języku Arno
 
 ### 5. Operacje logiczne i porównania
 
-| Token                        | Opis                 | Operator w C |
-| ---------------------------- | -------------------- | ------------ |
-| `YOU ARE NOT YOU YOU ARE ME` | Równość              | `==`         |
-| `LET OFF SOME STEAM BENNET`  | Większe niż          | `>`          |
-| `CONSIDER THAT A DIVORCE`    | Negacja / nierówność | `!=`         |
+| Token                        | Opis        | Operator w C |
+| ---------------------------- | ----------- | ------------ |
+| `YOU ARE NOT YOU YOU ARE ME` | Równość     | `==`         |
+| `LET OFF SOME STEAM BENNET`  | Większe niż | `>`          |
+| `CONSIDER THAT A DIVORCE`    | Nierówność  | `!=`         |
 
 ---
 
 ### 6. Sterowanie przepływem
 
-| Token                             | Opis                     | Odpowiednik w C |
-| --------------------------------- | ------------------------ | --------------- |
-| `BECAUSE I'M GOING TO SAY PLEASE` | If                       | `if`            |
-| `BULLSHIT`                        | Else                     | `else`          |
-| `YOU HAVE NO RESPECT FOR LOGIC`   | Koniec bloku warunkowego | `}`             |
+| Token                             | Opis                   | Odpowiednik w C |
+| --------------------------------- | ---------------------- | --------------- |
+| `BECAUSE I'M GOING TO SAY PLEASE` | Początek instrukcji if | `if (...) {`    |
+| `BULLSHIT`                        | Gałąź else             | `} else {`      |
+| `YOU HAVE NO RESPECT FOR LOGIC`   | Koniec instrukcji if   | `}`             |
 
 ---
 
@@ -96,37 +105,41 @@ Poniżej znajduje się szczegółowy podział tokenów używanych w języku Arno
 
 | Token          | Opis           | Odpowiednik w C |
 | -------------- | -------------- | --------------- |
-| `STICK AROUND` | Początek pętli | `while`         |
+| `STICK AROUND` | Początek pętli | `while (...) {` |
 | `CHILL`        | Koniec pętli   | `}`             |
 
 ---
 
 ### 8. Wartości i identyfikatory
 
-| Token            | Opis              |
-| ---------------- | ----------------- |
-| `NUMBER`         | Liczby całkowite  |
-| `IDENTIFIER`     | Nazwy zmiennych   |
-| `TRUE` / `FALSE` | Wartości logiczne |
+| Token         | Opis                              |
+| ------------- | --------------------------------- |
+| `NUMBER`      | Liczby całkowite                  |
+| `STRING`      | Literały tekstowe (w cudzysłowie) |
+| `IDENTIFIER`  | Nazwy zmiennych                   |
+| `NO PROBLEMO` | Wartość logiczna prawda (`true`)  |
+| `I LIED`      | Wartość logiczna fałsz (`false`)  |
 
 ---
 
 ### 9. Symbole pomocnicze
 
-| Token     | Opis                 |
-| --------- | -------------------- |
-| `(` `)`   | Nawiasy              |
-| `;`       | Separator instrukcji |
-| operatory | symbole pomocnicze   |
+| Token   | Opis    |
+| ------- | ------- |
+| `(` `)` | Nawiasy |
 
 ---
 
 ## Gramatyka ANTLR4
 
+Poniżej przedstawiono formalną gramatykę języka ArnoldC przygotowaną dla narzędzia ANTLR4.
 
+### Plik: `ArnoldC.g4`
 
 ```antlr
 grammar ArnoldC;
+
+// ===== Parser rules =====
 
 program
     : START statement* END EOF
@@ -141,11 +154,11 @@ statement
     ;
 
 declaration
-    : DECLARE IDENTIFIER
+    : DECLARE IDENTIFIER (ASSIGN expression)?
     ;
 
 assignment
-    : ASSIGN IDENTIFIER expression
+    : IDENTIFIER ASSIGN expression
     ;
 
 printStmt
@@ -161,49 +174,73 @@ loopStmt
     ;
 
 expression
-    : expression ADD expression
-    | expression SUB expression
-    | expression MUL expression
-    | expression DIV expression
-    | expression EQ expression
-    | expression GT expression
-    | expression NEQ expression
-    | IDENTIFIER
+    : comparisonExpr
+    ;
+
+comparisonExpr
+    : additiveExpr ((EQ | GT | NEQ) additiveExpr)*
+    ;
+
+additiveExpr
+    : multiplicativeExpr ((ADD | SUB) multiplicativeExpr)*
+    ;
+
+multiplicativeExpr
+    : atom ((MUL | DIV) atom)*
+    ;
+
+atom
+    : IDENTIFIER
     | NUMBER
+    | STRING
+    | TRUE
+    | FALSE
     | '(' expression ')'
     ;
 
+// ===== Lexer rules =====
 
-
+// Program structure
 START  : 'IT\'S SHOWTIME';
 END    : 'YOU HAVE BEEN TERMINATED';
 
-
+// I/O
 PRINT  : 'TALK TO THE HAND';
 
-
+// Variables
 DECLARE : 'HEY CHRISTMAS TREE';
 ASSIGN  : 'YOU SET US UP';
 
+// Arithmetic
 ADD : 'GET UP';
 SUB : 'GET DOWN';
 MUL : 'YOU\'RE FIRED';
 DIV : 'HE HAD TO SPLIT';
 
+// Logic
 EQ  : 'YOU ARE NOT YOU YOU ARE ME';
 GT  : 'LET OFF SOME STEAM BENNET';
 NEQ : 'CONSIDER THAT A DIVORCE';
 
+// Control flow
 IF    : 'BECAUSE I\'M GOING TO SAY PLEASE';
 ELSE  : 'BULLSHIT';
 ENDIF : 'YOU HAVE NO RESPECT FOR LOGIC';
 
+// Loop
 LOOP    : 'STICK AROUND';
 ENDLOOP : 'CHILL';
 
+// Values
+TRUE  : 'NO PROBLEMO';
+FALSE : 'I LIED';
+
+// Literals and identifiers
 NUMBER : [0-9]+;
+STRING : '"' (~["\\] | '\\' .)* '"';
 IDENTIFIER : [a-zA-Z_][a-zA-Z_0-9]*;
 
+// Whitespace
 WS : [ \t\r\n]+ -> skip;
 ```
 
