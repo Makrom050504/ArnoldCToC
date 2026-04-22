@@ -191,7 +191,6 @@ FUNC_END     : 'HASTA LA VISTA, BABY' ;
 CALL         : 'DO IT NOW' ;
 CALL_ASSIGN  : 'GET YOUR ASS TO MARS' ;
 
-// Booleany z @ prefiksem (jak w oryginale: @NO PROBLEMO, @I LIED)
 TRUE    : '@NO PROBLEMO' ;
 FALSE   : '@I LIED' ;
 
