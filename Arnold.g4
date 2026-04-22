@@ -10,8 +10,7 @@ program
 
 statement
     : declaration
-    | assignment_init
-    | assignment_full
+    | assignment
     | printStmt
     | readStmt
     | ifStmt
@@ -29,7 +28,7 @@ declaration
     ;
 
 // przypisanie zwykłe (GET TO THE CHOPPER)
-assignment_full
+assignment
     : ASSIGN_VAR_START IDENTIFIER
       ASSIGN_VAR_VALUE expression
       ASSIGN_VAR_END
