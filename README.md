@@ -63,7 +63,7 @@ ANTLR4
 | DECLARE  | `HEY CHRISTMAS TREE` | Deklaracja zmiennej    |
 | SET_INIT | `YOU SET US UP`      | Inicjalizacja zmiennej |
 
-### Przypisanie istniejacej zmiennej
+### Aktualizacja zmiennej/blok obliczeniowy
 | Token            | Wzorzec                 | Opis                 |
 | ---------------- | ----------------------- | -------------------- |
 | ASSIGN_VAR_START | `GET TO THE CHOPPER`    | Początek przypisania |
