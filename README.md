@@ -126,7 +126,7 @@ ANTLR4
 | FUNC_END     | `HASTA LA VISTA, BABY`                               | Koniec funkcji             |
 | CALL         | `DO IT NOW`                                          | Wywołanie funkcji          |
 | CALL_ASSIGN  | `GET YOUR ASS TO MARS`                               | Przypisanie wyniku funkcji |
-|READ |I WANT TO ASK YOU A BUNCH OF QUESTIONS AND I WANT TO HAVE THEM ANSWERED IMMEDIATELY|Wbudowana funkcja wczytująca liczbę
+|READ |`I WANT TO ASK YOU A BUNCH OF QUESTIONS AND I WANT TO HAVE THEM ANSWERED IMMEDIATELY`|Wbudowana funkcja wczytująca liczbę
 ### 9. Wartości logiczne
 
 | Token | Wzorzec       | Wartość |
