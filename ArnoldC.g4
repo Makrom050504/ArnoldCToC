@@ -14,7 +14,6 @@ statement
     : declaration
     | assignment
     | printStmt
-    | readStmt
     | ifStmt
     | whileStmt
     | funcCallStmt
@@ -63,7 +62,7 @@ operation
     | OR  operand
     ;
 
-// Operand to liczba lub identyfikator (brak złożonych wyrażeń!)
+// Operand to liczba lub identyfikator
 operand
     : NUMBER
     | IDENTIFIER
@@ -76,10 +75,6 @@ operand
 // =======================
 printStmt
     : PRINT (STRING | IDENTIFIER | NUMBER)
-    ;
-
-readStmt
-    : READ IDENTIFIER
     ;
 
 // =======================
@@ -146,7 +141,7 @@ funcCallStmt
 // DO IT NOW methodName arg1 arg2
 funcCallAssignStmt
     : CALL_ASSIGN IDENTIFIER
-      CALL IDENTIFIER operand*
+      CALL (IDENTIFIER | READ) operand*
     ;
 
 // =======================
