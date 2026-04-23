@@ -51,7 +51,6 @@ ANTLR4
 | Token | Wzorzec                                 | Opis               |
 | ----- | ----------------------------------------| ------------------ |
 | PRINT | `TALK TO THE HAND`                      | Wypisanie wartości |
-| READ  | `I WANT TO ASK YOU A BUNCH OF QUESTIONS<br> AND I WANT TO HAVE THEM ANSWERED IMMEDIATELY` | Wczytanie liczby   |
 
 
 ---
@@ -127,13 +126,13 @@ ANTLR4
 | FUNC_END     | `HASTA LA VISTA, BABY`                               | Koniec funkcji             |
 | CALL         | `DO IT NOW`                                          | Wywołanie funkcji          |
 | CALL_ASSIGN  | `GET YOUR ASS TO MARS`                               | Przypisanie wyniku funkcji |
-
+|READ |I WANT TO ASK YOU A BUNCH OF QUESTIONS AND I WANT TO HAVE THEM ANSWERED IMMEDIATELY|Wbudowana funkcja wczytująca liczbę
 ### 9. Wartości logiczne
 
 | Token | Wzorzec       | Wartość |
 | ----- | ------------- | ------- |
-| TRUE  | `NO PROBLEMO` | `true`  |
-| FALSE | `I LIED`      | `false` |
+| TRUE  | `@NO PROBLEMO` | `true`  |
+| FALSE | `@I LIED`      | `false` |
 ### 10. Literały i identyfikatory
 
 | Token      | Wzorzec (regex)          | Opis             |
