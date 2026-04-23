@@ -138,7 +138,8 @@ funcCallStmt
 
 // Wywołanie z przypisaniem wyniku:
 // GET YOUR ASS TO MARS resultVar
-// DO IT NOW methodName arg1 arg2
+// DO IT NOW methodName arg1 arg2/ DO IT NOW \n I WANT TO ASK YOU A BUNCH OF QUESTIONS AND I WANT TO HAVE THEM ANSWERED IMMEDIATELY
+// 
 funcCallAssignStmt
     : CALL_ASSIGN IDENTIFIER
       CALL (IDENTIFIER | READ) operand*
