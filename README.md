@@ -39,7 +39,7 @@ ANTLR4
 
 ### 1. Struktura programu
 
-| Token | Wzorzec (lexeme)           | Opis              |
+| Token | Wzorzec            | Opis              |
 | ----- | -------------------------- | ----------------- |
 | START | `IT'S SHOWTIME`            | Początek programu |
 | END   | `YOU HAVE BEEN TERMINATED` | Koniec programu   |
