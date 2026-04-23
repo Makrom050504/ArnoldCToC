@@ -142,21 +142,14 @@ ANTLR4
 | IDENTIFIER | `[a-zA-Z_][a-zA-Z0-9_]*` | Nazwa zmiennej   |
 
 
----
 
-### 11. Symbole pomocnicze
 
-| Token  | Wzorzec | Opis         |
-| ------ | ------- | ------------ |
-| LPAREN | `(`     | Lewy nawias  |
-| RPAREN | `)`     | Prawy nawias |
-
-### 12. Obsługa błędów
+### 11. Obsługa błędów
 | Token       | Wzorzec                        | Opis        |
 | ----------- | ------------------------------ | ----------- |
 | ERROR_TOKEN | `WHAT THE FUCK DID I DO WRONG` | Token błędu |
 
-### 13. Białe znaki
+### 12. Białe znaki
 | Token | Wzorzec      | Opis                   |
 | ----- | ------------ | ---------------------- |
 | WS    | `[ \t\r\n]+` | Ignorowane białe znaki |
