@@ -5,7 +5,7 @@ from MyVisitor import MyVisitor
 
 
 
-input_stream = FileStream("Tests/test.arnoldc")
+input_stream = FileStream("Tests/test.modulo_func")
 lexer = ArnoldCLexer(input_stream)
 tokens = CommonTokenStream(lexer)
 parser = ArnoldCParser(tokens)

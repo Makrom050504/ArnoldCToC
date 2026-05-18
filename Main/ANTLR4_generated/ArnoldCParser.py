@@ -1,4 +1,4 @@
-# Generated from ArnoldC.g4 by ANTLR 4.13.2
+# Generated from grammar/ArnoldC.g4 by ANTLR 4.13.2
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
@@ -10,67 +10,69 @@ else:
 
 def serializedATN():
     return [
-        4,1,37,176,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+        4,1,37,182,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
         6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,
         2,14,7,14,1,0,5,0,32,8,0,10,0,12,0,35,9,0,1,0,1,0,5,0,39,8,0,10,
-        0,12,0,42,9,0,1,0,1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,3,1,54,8,1,
-        1,2,1,2,1,2,1,2,1,2,1,3,1,3,1,4,1,4,1,4,1,4,1,4,5,4,68,8,4,10,4,
-        12,4,71,9,4,1,4,1,4,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,
-        1,5,1,5,1,5,1,5,1,5,1,5,1,5,3,5,93,8,5,1,6,1,6,1,7,1,7,1,7,1,8,1,
-        8,1,8,5,8,103,8,8,10,8,12,8,106,9,8,1,8,1,8,5,8,110,8,8,10,8,12,
-        8,113,9,8,3,8,115,8,8,1,8,1,8,1,9,1,9,1,9,5,9,122,8,9,10,9,12,9,
-        125,9,9,1,9,1,9,1,10,1,10,1,10,5,10,132,8,10,10,10,12,10,135,9,10,
-        1,10,3,10,138,8,10,1,10,5,10,141,8,10,10,10,12,10,144,9,10,1,10,
-        3,10,147,8,10,1,10,1,10,1,11,1,11,1,11,1,12,1,12,3,12,156,8,12,1,
-        13,1,13,1,13,5,13,161,8,13,10,13,12,13,164,9,13,1,14,1,14,1,14,1,
-        14,1,14,5,14,171,8,14,10,14,12,14,174,9,14,1,14,0,0,15,0,2,4,6,8,
-        10,12,14,16,18,20,22,24,26,28,0,3,3,0,31,32,34,34,36,36,1,0,34,36,
-        2,0,4,4,36,36,188,0,33,1,0,0,0,2,53,1,0,0,0,4,55,1,0,0,0,6,60,1,
-        0,0,0,8,62,1,0,0,0,10,92,1,0,0,0,12,94,1,0,0,0,14,96,1,0,0,0,16,
-        99,1,0,0,0,18,118,1,0,0,0,20,128,1,0,0,0,22,150,1,0,0,0,24,153,1,
-        0,0,0,26,157,1,0,0,0,28,165,1,0,0,0,30,32,3,20,10,0,31,30,1,0,0,
-        0,32,35,1,0,0,0,33,31,1,0,0,0,33,34,1,0,0,0,34,36,1,0,0,0,35,33,
-        1,0,0,0,36,40,5,1,0,0,37,39,3,2,1,0,38,37,1,0,0,0,39,42,1,0,0,0,
-        40,38,1,0,0,0,40,41,1,0,0,0,41,43,1,0,0,0,42,40,1,0,0,0,43,44,5,
-        2,0,0,44,45,5,0,0,1,45,1,1,0,0,0,46,54,3,4,2,0,47,54,3,8,4,0,48,
-        54,3,14,7,0,49,54,3,16,8,0,50,54,3,18,9,0,51,54,3,26,13,0,52,54,
-        3,28,14,0,53,46,1,0,0,0,53,47,1,0,0,0,53,48,1,0,0,0,53,49,1,0,0,
-        0,53,50,1,0,0,0,53,51,1,0,0,0,53,52,1,0,0,0,54,3,1,0,0,0,55,56,5,
-        5,0,0,56,57,5,36,0,0,57,58,5,6,0,0,58,59,3,6,3,0,59,5,1,0,0,0,60,
-        61,7,0,0,0,61,7,1,0,0,0,62,63,5,7,0,0,63,64,5,36,0,0,64,65,5,8,0,
-        0,65,69,3,12,6,0,66,68,3,10,5,0,67,66,1,0,0,0,68,71,1,0,0,0,69,67,
-        1,0,0,0,69,70,1,0,0,0,70,72,1,0,0,0,71,69,1,0,0,0,72,73,5,9,0,0,
-        73,9,1,0,0,0,74,75,5,10,0,0,75,93,3,12,6,0,76,77,5,11,0,0,77,93,
-        3,12,6,0,78,79,5,12,0,0,79,93,3,12,6,0,80,81,5,13,0,0,81,93,3,12,
-        6,0,82,83,5,14,0,0,83,93,3,12,6,0,84,85,5,15,0,0,85,93,3,12,6,0,
-        86,87,5,16,0,0,87,93,3,12,6,0,88,89,5,17,0,0,89,93,3,12,6,0,90,91,
-        5,18,0,0,91,93,3,12,6,0,92,74,1,0,0,0,92,76,1,0,0,0,92,78,1,0,0,
-        0,92,80,1,0,0,0,92,82,1,0,0,0,92,84,1,0,0,0,92,86,1,0,0,0,92,88,
-        1,0,0,0,92,90,1,0,0,0,93,11,1,0,0,0,94,95,7,0,0,0,95,13,1,0,0,0,
-        96,97,5,3,0,0,97,98,7,1,0,0,98,15,1,0,0,0,99,100,5,19,0,0,100,104,
-        3,12,6,0,101,103,3,2,1,0,102,101,1,0,0,0,103,106,1,0,0,0,104,102,
-        1,0,0,0,104,105,1,0,0,0,105,114,1,0,0,0,106,104,1,0,0,0,107,111,
-        5,20,0,0,108,110,3,2,1,0,109,108,1,0,0,0,110,113,1,0,0,0,111,109,
-        1,0,0,0,111,112,1,0,0,0,112,115,1,0,0,0,113,111,1,0,0,0,114,107,
-        1,0,0,0,114,115,1,0,0,0,115,116,1,0,0,0,116,117,5,21,0,0,117,17,
-        1,0,0,0,118,119,5,22,0,0,119,123,3,12,6,0,120,122,3,2,1,0,121,120,
-        1,0,0,0,122,125,1,0,0,0,123,121,1,0,0,0,123,124,1,0,0,0,124,126,
-        1,0,0,0,125,123,1,0,0,0,126,127,5,23,0,0,127,19,1,0,0,0,128,129,
-        5,24,0,0,129,133,5,36,0,0,130,132,3,22,11,0,131,130,1,0,0,0,132,
-        135,1,0,0,0,133,131,1,0,0,0,133,134,1,0,0,0,134,137,1,0,0,0,135,
-        133,1,0,0,0,136,138,5,25,0,0,137,136,1,0,0,0,137,138,1,0,0,0,138,
-        142,1,0,0,0,139,141,3,2,1,0,140,139,1,0,0,0,141,144,1,0,0,0,142,
-        140,1,0,0,0,142,143,1,0,0,0,143,146,1,0,0,0,144,142,1,0,0,0,145,
-        147,3,24,12,0,146,145,1,0,0,0,146,147,1,0,0,0,147,148,1,0,0,0,148,
-        149,5,28,0,0,149,21,1,0,0,0,150,151,5,26,0,0,151,152,5,36,0,0,152,
-        23,1,0,0,0,153,155,5,27,0,0,154,156,3,12,6,0,155,154,1,0,0,0,155,
-        156,1,0,0,0,156,25,1,0,0,0,157,158,5,29,0,0,158,162,5,36,0,0,159,
-        161,3,12,6,0,160,159,1,0,0,0,161,164,1,0,0,0,162,160,1,0,0,0,162,
-        163,1,0,0,0,163,27,1,0,0,0,164,162,1,0,0,0,165,166,5,30,0,0,166,
-        167,5,36,0,0,167,168,5,29,0,0,168,172,7,2,0,0,169,171,3,12,6,0,170,
-        169,1,0,0,0,171,174,1,0,0,0,172,170,1,0,0,0,172,173,1,0,0,0,173,
-        29,1,0,0,0,174,172,1,0,0,0,16,33,40,53,69,92,104,111,114,123,133,
-        137,142,146,155,162,172
+        0,12,0,42,9,0,1,0,1,0,5,0,46,8,0,10,0,12,0,49,9,0,1,0,1,0,1,1,1,
+        1,1,1,1,1,1,1,1,1,1,1,3,1,60,8,1,1,2,1,2,1,2,1,2,1,2,1,3,1,3,1,4,
+        1,4,1,4,1,4,1,4,5,4,74,8,4,10,4,12,4,77,9,4,1,4,1,4,1,5,1,5,1,5,
+        1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,3,5,
+        99,8,5,1,6,1,6,1,7,1,7,1,7,1,8,1,8,1,8,5,8,109,8,8,10,8,12,8,112,
+        9,8,1,8,1,8,5,8,116,8,8,10,8,12,8,119,9,8,3,8,121,8,8,1,8,1,8,1,
+        9,1,9,1,9,5,9,128,8,9,10,9,12,9,131,9,9,1,9,1,9,1,10,1,10,1,10,5,
+        10,138,8,10,10,10,12,10,141,9,10,1,10,3,10,144,8,10,1,10,5,10,147,
+        8,10,10,10,12,10,150,9,10,1,10,3,10,153,8,10,1,10,1,10,1,11,1,11,
+        1,11,1,12,1,12,3,12,162,8,12,1,13,1,13,1,13,5,13,167,8,13,10,13,
+        12,13,170,9,13,1,14,1,14,1,14,1,14,1,14,5,14,177,8,14,10,14,12,14,
+        180,9,14,1,14,0,0,15,0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,0,3,
+        3,0,31,32,34,34,36,36,1,0,34,36,2,0,4,4,36,36,195,0,33,1,0,0,0,2,
+        59,1,0,0,0,4,61,1,0,0,0,6,66,1,0,0,0,8,68,1,0,0,0,10,98,1,0,0,0,
+        12,100,1,0,0,0,14,102,1,0,0,0,16,105,1,0,0,0,18,124,1,0,0,0,20,134,
+        1,0,0,0,22,156,1,0,0,0,24,159,1,0,0,0,26,163,1,0,0,0,28,171,1,0,
+        0,0,30,32,3,20,10,0,31,30,1,0,0,0,32,35,1,0,0,0,33,31,1,0,0,0,33,
+        34,1,0,0,0,34,36,1,0,0,0,35,33,1,0,0,0,36,40,5,1,0,0,37,39,3,2,1,
+        0,38,37,1,0,0,0,39,42,1,0,0,0,40,38,1,0,0,0,40,41,1,0,0,0,41,43,
+        1,0,0,0,42,40,1,0,0,0,43,47,5,2,0,0,44,46,3,20,10,0,45,44,1,0,0,
+        0,46,49,1,0,0,0,47,45,1,0,0,0,47,48,1,0,0,0,48,50,1,0,0,0,49,47,
+        1,0,0,0,50,51,5,0,0,1,51,1,1,0,0,0,52,60,3,4,2,0,53,60,3,8,4,0,54,
+        60,3,14,7,0,55,60,3,16,8,0,56,60,3,18,9,0,57,60,3,26,13,0,58,60,
+        3,28,14,0,59,52,1,0,0,0,59,53,1,0,0,0,59,54,1,0,0,0,59,55,1,0,0,
+        0,59,56,1,0,0,0,59,57,1,0,0,0,59,58,1,0,0,0,60,3,1,0,0,0,61,62,5,
+        5,0,0,62,63,5,36,0,0,63,64,5,6,0,0,64,65,3,6,3,0,65,5,1,0,0,0,66,
+        67,7,0,0,0,67,7,1,0,0,0,68,69,5,7,0,0,69,70,5,36,0,0,70,71,5,8,0,
+        0,71,75,3,12,6,0,72,74,3,10,5,0,73,72,1,0,0,0,74,77,1,0,0,0,75,73,
+        1,0,0,0,75,76,1,0,0,0,76,78,1,0,0,0,77,75,1,0,0,0,78,79,5,9,0,0,
+        79,9,1,0,0,0,80,81,5,10,0,0,81,99,3,12,6,0,82,83,5,11,0,0,83,99,
+        3,12,6,0,84,85,5,12,0,0,85,99,3,12,6,0,86,87,5,13,0,0,87,99,3,12,
+        6,0,88,89,5,14,0,0,89,99,3,12,6,0,90,91,5,15,0,0,91,99,3,12,6,0,
+        92,93,5,16,0,0,93,99,3,12,6,0,94,95,5,17,0,0,95,99,3,12,6,0,96,97,
+        5,18,0,0,97,99,3,12,6,0,98,80,1,0,0,0,98,82,1,0,0,0,98,84,1,0,0,
+        0,98,86,1,0,0,0,98,88,1,0,0,0,98,90,1,0,0,0,98,92,1,0,0,0,98,94,
+        1,0,0,0,98,96,1,0,0,0,99,11,1,0,0,0,100,101,7,0,0,0,101,13,1,0,0,
+        0,102,103,5,3,0,0,103,104,7,1,0,0,104,15,1,0,0,0,105,106,5,19,0,
+        0,106,110,3,12,6,0,107,109,3,2,1,0,108,107,1,0,0,0,109,112,1,0,0,
+        0,110,108,1,0,0,0,110,111,1,0,0,0,111,120,1,0,0,0,112,110,1,0,0,
+        0,113,117,5,20,0,0,114,116,3,2,1,0,115,114,1,0,0,0,116,119,1,0,0,
+        0,117,115,1,0,0,0,117,118,1,0,0,0,118,121,1,0,0,0,119,117,1,0,0,
+        0,120,113,1,0,0,0,120,121,1,0,0,0,121,122,1,0,0,0,122,123,5,21,0,
+        0,123,17,1,0,0,0,124,125,5,22,0,0,125,129,3,12,6,0,126,128,3,2,1,
+        0,127,126,1,0,0,0,128,131,1,0,0,0,129,127,1,0,0,0,129,130,1,0,0,
+        0,130,132,1,0,0,0,131,129,1,0,0,0,132,133,5,23,0,0,133,19,1,0,0,
+        0,134,135,5,24,0,0,135,139,5,36,0,0,136,138,3,22,11,0,137,136,1,
+        0,0,0,138,141,1,0,0,0,139,137,1,0,0,0,139,140,1,0,0,0,140,143,1,
+        0,0,0,141,139,1,0,0,0,142,144,5,25,0,0,143,142,1,0,0,0,143,144,1,
+        0,0,0,144,148,1,0,0,0,145,147,3,2,1,0,146,145,1,0,0,0,147,150,1,
+        0,0,0,148,146,1,0,0,0,148,149,1,0,0,0,149,152,1,0,0,0,150,148,1,
+        0,0,0,151,153,3,24,12,0,152,151,1,0,0,0,152,153,1,0,0,0,153,154,
+        1,0,0,0,154,155,5,28,0,0,155,21,1,0,0,0,156,157,5,26,0,0,157,158,
+        5,36,0,0,158,23,1,0,0,0,159,161,5,27,0,0,160,162,3,12,6,0,161,160,
+        1,0,0,0,161,162,1,0,0,0,162,25,1,0,0,0,163,164,5,29,0,0,164,168,
+        5,36,0,0,165,167,3,12,6,0,166,165,1,0,0,0,167,170,1,0,0,0,168,166,
+        1,0,0,0,168,169,1,0,0,0,169,27,1,0,0,0,170,168,1,0,0,0,171,172,5,
+        30,0,0,172,173,5,36,0,0,173,174,5,29,0,0,174,178,7,2,0,0,175,177,
+        3,12,6,0,176,175,1,0,0,0,177,180,1,0,0,0,178,176,1,0,0,0,178,179,
+        1,0,0,0,179,29,1,0,0,0,180,178,1,0,0,0,17,33,40,47,59,75,98,110,
+        117,120,129,139,143,148,152,161,168,178
     ]
 
 class ArnoldCParser ( Parser ):
@@ -208,14 +210,6 @@ class ArnoldCParser ( Parser ):
         def getRuleIndex(self):
             return ArnoldCParser.RULE_program
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterProgram" ):
-                listener.enterProgram(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitProgram" ):
-                listener.exitProgram(self)
-
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitProgram" ):
                 return visitor.visitProgram(self)
@@ -256,7 +250,17 @@ class ArnoldCParser ( Parser ):
 
             self.state = 43
             self.match(ArnoldCParser.END)
-            self.state = 44
+            self.state = 47
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            while _la==24:
+                self.state = 44
+                self.funcDecl()
+                self.state = 49
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+
+            self.state = 50
             self.match(ArnoldCParser.EOF)
         except RecognitionException as re:
             localctx.exception = re
@@ -305,14 +309,6 @@ class ArnoldCParser ( Parser ):
         def getRuleIndex(self):
             return ArnoldCParser.RULE_statement
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterStatement" ):
-                listener.enterStatement(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitStatement" ):
-                listener.exitStatement(self)
-
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitStatement" ):
                 return visitor.visitStatement(self)
@@ -327,42 +323,42 @@ class ArnoldCParser ( Parser ):
         localctx = ArnoldCParser.StatementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 2, self.RULE_statement)
         try:
-            self.state = 53
+            self.state = 59
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [5]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 46
+                self.state = 52
                 self.declaration()
                 pass
             elif token in [7]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 47
+                self.state = 53
                 self.assignment()
                 pass
             elif token in [3]:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 48
+                self.state = 54
                 self.printStmt()
                 pass
             elif token in [19]:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 49
+                self.state = 55
                 self.ifStmt()
                 pass
             elif token in [22]:
                 self.enterOuterAlt(localctx, 5)
-                self.state = 50
+                self.state = 56
                 self.whileStmt()
                 pass
             elif token in [29]:
                 self.enterOuterAlt(localctx, 6)
-                self.state = 51
+                self.state = 57
                 self.funcCallStmt()
                 pass
             elif token in [30]:
                 self.enterOuterAlt(localctx, 7)
-                self.state = 52
+                self.state = 58
                 self.funcCallAssignStmt()
                 pass
             else:
@@ -400,14 +396,6 @@ class ArnoldCParser ( Parser ):
         def getRuleIndex(self):
             return ArnoldCParser.RULE_declaration
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDeclaration" ):
-                listener.enterDeclaration(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDeclaration" ):
-                listener.exitDeclaration(self)
-
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitDeclaration" ):
                 return visitor.visitDeclaration(self)
@@ -423,13 +411,13 @@ class ArnoldCParser ( Parser ):
         self.enterRule(localctx, 4, self.RULE_declaration)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 55
+            self.state = 61
             self.match(ArnoldCParser.DECLARE)
-            self.state = 56
+            self.state = 62
             self.match(ArnoldCParser.IDENTIFIER)
-            self.state = 57
+            self.state = 63
             self.match(ArnoldCParser.SET_INIT)
-            self.state = 58
+            self.state = 64
             self.initValue()
         except RecognitionException as re:
             localctx.exception = re
@@ -462,14 +450,6 @@ class ArnoldCParser ( Parser ):
         def getRuleIndex(self):
             return ArnoldCParser.RULE_initValue
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterInitValue" ):
-                listener.enterInitValue(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitInitValue" ):
-                listener.exitInitValue(self)
-
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitInitValue" ):
                 return visitor.visitInitValue(self)
@@ -486,7 +466,7 @@ class ArnoldCParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 60
+            self.state = 66
             _la = self._input.LA(1)
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 92341796864) != 0)):
                 self._errHandler.recoverInline(self)
@@ -535,14 +515,6 @@ class ArnoldCParser ( Parser ):
         def getRuleIndex(self):
             return ArnoldCParser.RULE_assignment
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterAssignment" ):
-                listener.enterAssignment(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitAssignment" ):
-                listener.exitAssignment(self)
-
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitAssignment" ):
                 return visitor.visitAssignment(self)
@@ -559,25 +531,25 @@ class ArnoldCParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 62
+            self.state = 68
             self.match(ArnoldCParser.ASSIGN_VAR_START)
-            self.state = 63
-            self.match(ArnoldCParser.IDENTIFIER)
-            self.state = 64
-            self.match(ArnoldCParser.ASSIGN_VAR_VALUE)
-            self.state = 65
-            self.operand()
             self.state = 69
+            self.match(ArnoldCParser.IDENTIFIER)
+            self.state = 70
+            self.match(ArnoldCParser.ASSIGN_VAR_VALUE)
+            self.state = 71
+            self.operand()
+            self.state = 75
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while (((_la) & ~0x3f) == 0 and ((1 << _la) & 523264) != 0):
-                self.state = 66
+                self.state = 72
                 self.operation()
-                self.state = 71
+                self.state = 77
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 72
+            self.state = 78
             self.match(ArnoldCParser.ASSIGN_VAR_END)
         except RecognitionException as re:
             localctx.exception = re
@@ -629,14 +601,6 @@ class ArnoldCParser ( Parser ):
         def getRuleIndex(self):
             return ArnoldCParser.RULE_operation
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOperation" ):
-                listener.enterOperation(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOperation" ):
-                listener.exitOperation(self)
-
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitOperation" ):
                 return visitor.visitOperation(self)
@@ -651,70 +615,70 @@ class ArnoldCParser ( Parser ):
         localctx = ArnoldCParser.OperationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 10, self.RULE_operation)
         try:
-            self.state = 92
+            self.state = 98
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [10]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 74
+                self.state = 80
                 self.match(ArnoldCParser.ADD)
-                self.state = 75
+                self.state = 81
                 self.operand()
                 pass
             elif token in [11]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 76
+                self.state = 82
                 self.match(ArnoldCParser.SUB)
-                self.state = 77
+                self.state = 83
                 self.operand()
                 pass
             elif token in [12]:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 78
+                self.state = 84
                 self.match(ArnoldCParser.MUL)
-                self.state = 79
+                self.state = 85
                 self.operand()
                 pass
             elif token in [13]:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 80
+                self.state = 86
                 self.match(ArnoldCParser.DIV)
-                self.state = 81
+                self.state = 87
                 self.operand()
                 pass
             elif token in [14]:
                 self.enterOuterAlt(localctx, 5)
-                self.state = 82
+                self.state = 88
                 self.match(ArnoldCParser.MOD)
-                self.state = 83
+                self.state = 89
                 self.operand()
                 pass
             elif token in [15]:
                 self.enterOuterAlt(localctx, 6)
-                self.state = 84
+                self.state = 90
                 self.match(ArnoldCParser.EQ)
-                self.state = 85
+                self.state = 91
                 self.operand()
                 pass
             elif token in [16]:
                 self.enterOuterAlt(localctx, 7)
-                self.state = 86
+                self.state = 92
                 self.match(ArnoldCParser.GT)
-                self.state = 87
+                self.state = 93
                 self.operand()
                 pass
             elif token in [17]:
                 self.enterOuterAlt(localctx, 8)
-                self.state = 88
+                self.state = 94
                 self.match(ArnoldCParser.AND)
-                self.state = 89
+                self.state = 95
                 self.operand()
                 pass
             elif token in [18]:
                 self.enterOuterAlt(localctx, 9)
-                self.state = 90
+                self.state = 96
                 self.match(ArnoldCParser.OR)
-                self.state = 91
+                self.state = 97
                 self.operand()
                 pass
             else:
@@ -751,14 +715,6 @@ class ArnoldCParser ( Parser ):
         def getRuleIndex(self):
             return ArnoldCParser.RULE_operand
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOperand" ):
-                listener.enterOperand(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOperand" ):
-                listener.exitOperand(self)
-
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitOperand" ):
                 return visitor.visitOperand(self)
@@ -775,7 +731,7 @@ class ArnoldCParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 94
+            self.state = 100
             _la = self._input.LA(1)
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 92341796864) != 0)):
                 self._errHandler.recoverInline(self)
@@ -813,14 +769,6 @@ class ArnoldCParser ( Parser ):
         def getRuleIndex(self):
             return ArnoldCParser.RULE_printStmt
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterPrintStmt" ):
-                listener.enterPrintStmt(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitPrintStmt" ):
-                listener.exitPrintStmt(self)
-
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitPrintStmt" ):
                 return visitor.visitPrintStmt(self)
@@ -837,9 +785,9 @@ class ArnoldCParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 96
+            self.state = 102
             self.match(ArnoldCParser.PRINT)
-            self.state = 97
+            self.state = 103
             _la = self._input.LA(1)
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 120259084288) != 0)):
                 self._errHandler.recoverInline(self)
@@ -885,14 +833,6 @@ class ArnoldCParser ( Parser ):
         def getRuleIndex(self):
             return ArnoldCParser.RULE_ifStmt
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterIfStmt" ):
-                listener.enterIfStmt(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitIfStmt" ):
-                listener.exitIfStmt(self)
-
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitIfStmt" ):
                 return visitor.visitIfStmt(self)
@@ -909,39 +849,39 @@ class ArnoldCParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 99
+            self.state = 105
             self.match(ArnoldCParser.IF)
-            self.state = 100
+            self.state = 106
             self.operand()
-            self.state = 104
+            self.state = 110
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while (((_la) & ~0x3f) == 0 and ((1 << _la) & 1615331496) != 0):
-                self.state = 101
+                self.state = 107
                 self.statement()
-                self.state = 106
+                self.state = 112
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 114
+            self.state = 120
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==20:
-                self.state = 107
+                self.state = 113
                 self.match(ArnoldCParser.ELSE)
-                self.state = 111
+                self.state = 117
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while (((_la) & ~0x3f) == 0 and ((1 << _la) & 1615331496) != 0):
-                    self.state = 108
+                    self.state = 114
                     self.statement()
-                    self.state = 113
+                    self.state = 119
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
 
 
 
-            self.state = 116
+            self.state = 122
             self.match(ArnoldCParser.ENDIF)
         except RecognitionException as re:
             localctx.exception = re
@@ -979,14 +919,6 @@ class ArnoldCParser ( Parser ):
         def getRuleIndex(self):
             return ArnoldCParser.RULE_whileStmt
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterWhileStmt" ):
-                listener.enterWhileStmt(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitWhileStmt" ):
-                listener.exitWhileStmt(self)
-
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitWhileStmt" ):
                 return visitor.visitWhileStmt(self)
@@ -1003,21 +935,21 @@ class ArnoldCParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 118
+            self.state = 124
             self.match(ArnoldCParser.WHILE)
-            self.state = 119
+            self.state = 125
             self.operand()
-            self.state = 123
+            self.state = 129
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while (((_la) & ~0x3f) == 0 and ((1 << _la) & 1615331496) != 0):
-                self.state = 120
+                self.state = 126
                 self.statement()
-                self.state = 125
+                self.state = 131
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 126
+            self.state = 132
             self.match(ArnoldCParser.ENDWHILE)
         except RecognitionException as re:
             localctx.exception = re
@@ -1068,14 +1000,6 @@ class ArnoldCParser ( Parser ):
         def getRuleIndex(self):
             return ArnoldCParser.RULE_funcDecl
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterFuncDecl" ):
-                listener.enterFuncDecl(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitFuncDecl" ):
-                listener.exitFuncDecl(self)
-
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitFuncDecl" ):
                 return visitor.visitFuncDecl(self)
@@ -1092,47 +1016,47 @@ class ArnoldCParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 128
+            self.state = 134
             self.match(ArnoldCParser.FUNC_START)
-            self.state = 129
+            self.state = 135
             self.match(ArnoldCParser.IDENTIFIER)
-            self.state = 133
+            self.state = 139
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==26:
-                self.state = 130
+                self.state = 136
                 self.funcArg()
-                self.state = 135
+                self.state = 141
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 137
+            self.state = 143
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==25:
-                self.state = 136
+                self.state = 142
                 self.match(ArnoldCParser.FUNC_NONVOID)
 
 
-            self.state = 142
+            self.state = 148
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while (((_la) & ~0x3f) == 0 and ((1 << _la) & 1615331496) != 0):
-                self.state = 139
+                self.state = 145
                 self.statement()
-                self.state = 144
+                self.state = 150
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 146
+            self.state = 152
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==27:
-                self.state = 145
+                self.state = 151
                 self.returnStmt()
 
 
-            self.state = 148
+            self.state = 154
             self.match(ArnoldCParser.FUNC_END)
         except RecognitionException as re:
             localctx.exception = re
@@ -1159,14 +1083,6 @@ class ArnoldCParser ( Parser ):
         def getRuleIndex(self):
             return ArnoldCParser.RULE_funcArg
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterFuncArg" ):
-                listener.enterFuncArg(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitFuncArg" ):
-                listener.exitFuncArg(self)
-
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitFuncArg" ):
                 return visitor.visitFuncArg(self)
@@ -1182,9 +1098,9 @@ class ArnoldCParser ( Parser ):
         self.enterRule(localctx, 22, self.RULE_funcArg)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 150
+            self.state = 156
             self.match(ArnoldCParser.FUNC_ARGS)
-            self.state = 151
+            self.state = 157
             self.match(ArnoldCParser.IDENTIFIER)
         except RecognitionException as re:
             localctx.exception = re
@@ -1212,14 +1128,6 @@ class ArnoldCParser ( Parser ):
         def getRuleIndex(self):
             return ArnoldCParser.RULE_returnStmt
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterReturnStmt" ):
-                listener.enterReturnStmt(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitReturnStmt" ):
-                listener.exitReturnStmt(self)
-
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitReturnStmt" ):
                 return visitor.visitReturnStmt(self)
@@ -1236,13 +1144,13 @@ class ArnoldCParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 153
+            self.state = 159
             self.match(ArnoldCParser.RETURN)
-            self.state = 155
+            self.state = 161
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if (((_la) & ~0x3f) == 0 and ((1 << _la) & 92341796864) != 0):
-                self.state = 154
+                self.state = 160
                 self.operand()
 
 
@@ -1278,14 +1186,6 @@ class ArnoldCParser ( Parser ):
         def getRuleIndex(self):
             return ArnoldCParser.RULE_funcCallStmt
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterFuncCallStmt" ):
-                listener.enterFuncCallStmt(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitFuncCallStmt" ):
-                listener.exitFuncCallStmt(self)
-
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitFuncCallStmt" ):
                 return visitor.visitFuncCallStmt(self)
@@ -1302,17 +1202,17 @@ class ArnoldCParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 157
+            self.state = 163
             self.match(ArnoldCParser.CALL)
-            self.state = 158
+            self.state = 164
             self.match(ArnoldCParser.IDENTIFIER)
-            self.state = 162
+            self.state = 168
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while (((_la) & ~0x3f) == 0 and ((1 << _la) & 92341796864) != 0):
-                self.state = 159
+                self.state = 165
                 self.operand()
-                self.state = 164
+                self.state = 170
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -1357,14 +1257,6 @@ class ArnoldCParser ( Parser ):
         def getRuleIndex(self):
             return ArnoldCParser.RULE_funcCallAssignStmt
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterFuncCallAssignStmt" ):
-                listener.enterFuncCallAssignStmt(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitFuncCallAssignStmt" ):
-                listener.exitFuncCallAssignStmt(self)
-
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitFuncCallAssignStmt" ):
                 return visitor.visitFuncCallAssignStmt(self)
@@ -1381,26 +1273,26 @@ class ArnoldCParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 165
+            self.state = 171
             self.match(ArnoldCParser.CALL_ASSIGN)
-            self.state = 166
+            self.state = 172
             self.match(ArnoldCParser.IDENTIFIER)
-            self.state = 167
+            self.state = 173
             self.match(ArnoldCParser.CALL)
-            self.state = 168
+            self.state = 174
             _la = self._input.LA(1)
             if not(_la==4 or _la==36):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
                 self.consume()
-            self.state = 172
+            self.state = 178
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while (((_la) & ~0x3f) == 0 and ((1 << _la) & 92341796864) != 0):
-                self.state = 169
+                self.state = 175
                 self.operand()
-                self.state = 174
+                self.state = 180
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 

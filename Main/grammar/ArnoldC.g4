@@ -4,7 +4,7 @@ grammar ArnoldC;
 // PROGRAM STRUCTURE
 // =======================
 program
-    : funcDecl* START statement* END EOF
+    : funcDecl* START statement* END funcDecl* EOF
     ;
 
 // =======================
