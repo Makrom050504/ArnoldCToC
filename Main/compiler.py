@@ -1,11 +1,11 @@
 from antlr4 import *
-from ArnoldCLexer import ArnoldCLexer
-from ArnoldCParser import ArnoldCParser
+from ANTLR4_generated.ArnoldCLexer import ArnoldCLexer
+from ANTLR4_generated.ArnoldCParser import ArnoldCParser
 from MyVisitor import MyVisitor
 
 
 
-input_stream = FileStream("test.arnoldc")
+input_stream = FileStream("Tests/test.arnoldc")
 lexer = ArnoldCLexer(input_stream)
 tokens = CommonTokenStream(lexer)
 parser = ArnoldCParser(tokens)

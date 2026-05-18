@@ -1,9 +1,6 @@
 # Generated from ArnoldC.g4 by ANTLR 4.13.2
 from antlr4 import *
-if "." in __name__:
-    from ..ArnoldCParser import ArnoldCParser
-else:
-    from ArnoldCParser import ArnoldCParser
+from ANTLR4_generated.ArnoldCParser import ArnoldCParser
 
 # This class defines a complete generic visitor for a parse tree produced by ArnoldCParser.
 

@@ -1,4 +1,4 @@
-from ArnoldCVisitor import ArnoldCVisitor
+from ANTLR4_generated.ArnoldCVisitor import ArnoldCVisitor
 
 
 class MyVisitor(ArnoldCVisitor):
