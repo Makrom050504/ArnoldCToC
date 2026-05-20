@@ -1,4 +1,4 @@
-# Generated from grammar/ArnoldC.g4 by ANTLR 4.13.2
+# Generated from ArnoldC.g4 by ANTLR 4.13.2
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
@@ -10,69 +10,68 @@ else:
 
 def serializedATN():
     return [
-        4,1,37,182,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+        4,1,37,180,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
         6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,
         2,14,7,14,1,0,5,0,32,8,0,10,0,12,0,35,9,0,1,0,1,0,5,0,39,8,0,10,
         0,12,0,42,9,0,1,0,1,0,5,0,46,8,0,10,0,12,0,49,9,0,1,0,1,0,1,1,1,
-        1,1,1,1,1,1,1,1,1,1,1,3,1,60,8,1,1,2,1,2,1,2,1,2,1,2,1,3,1,3,1,4,
-        1,4,1,4,1,4,1,4,5,4,74,8,4,10,4,12,4,77,9,4,1,4,1,4,1,5,1,5,1,5,
-        1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,3,5,
-        99,8,5,1,6,1,6,1,7,1,7,1,7,1,8,1,8,1,8,5,8,109,8,8,10,8,12,8,112,
-        9,8,1,8,1,8,5,8,116,8,8,10,8,12,8,119,9,8,3,8,121,8,8,1,8,1,8,1,
-        9,1,9,1,9,5,9,128,8,9,10,9,12,9,131,9,9,1,9,1,9,1,10,1,10,1,10,5,
-        10,138,8,10,10,10,12,10,141,9,10,1,10,3,10,144,8,10,1,10,5,10,147,
-        8,10,10,10,12,10,150,9,10,1,10,3,10,153,8,10,1,10,1,10,1,11,1,11,
-        1,11,1,12,1,12,3,12,162,8,12,1,13,1,13,1,13,5,13,167,8,13,10,13,
-        12,13,170,9,13,1,14,1,14,1,14,1,14,1,14,5,14,177,8,14,10,14,12,14,
-        180,9,14,1,14,0,0,15,0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,0,3,
-        3,0,31,32,34,34,36,36,1,0,34,36,2,0,4,4,36,36,195,0,33,1,0,0,0,2,
-        59,1,0,0,0,4,61,1,0,0,0,6,66,1,0,0,0,8,68,1,0,0,0,10,98,1,0,0,0,
-        12,100,1,0,0,0,14,102,1,0,0,0,16,105,1,0,0,0,18,124,1,0,0,0,20,134,
-        1,0,0,0,22,156,1,0,0,0,24,159,1,0,0,0,26,163,1,0,0,0,28,171,1,0,
-        0,0,30,32,3,20,10,0,31,30,1,0,0,0,32,35,1,0,0,0,33,31,1,0,0,0,33,
-        34,1,0,0,0,34,36,1,0,0,0,35,33,1,0,0,0,36,40,5,1,0,0,37,39,3,2,1,
-        0,38,37,1,0,0,0,39,42,1,0,0,0,40,38,1,0,0,0,40,41,1,0,0,0,41,43,
-        1,0,0,0,42,40,1,0,0,0,43,47,5,2,0,0,44,46,3,20,10,0,45,44,1,0,0,
-        0,46,49,1,0,0,0,47,45,1,0,0,0,47,48,1,0,0,0,48,50,1,0,0,0,49,47,
-        1,0,0,0,50,51,5,0,0,1,51,1,1,0,0,0,52,60,3,4,2,0,53,60,3,8,4,0,54,
-        60,3,14,7,0,55,60,3,16,8,0,56,60,3,18,9,0,57,60,3,26,13,0,58,60,
-        3,28,14,0,59,52,1,0,0,0,59,53,1,0,0,0,59,54,1,0,0,0,59,55,1,0,0,
-        0,59,56,1,0,0,0,59,57,1,0,0,0,59,58,1,0,0,0,60,3,1,0,0,0,61,62,5,
-        5,0,0,62,63,5,36,0,0,63,64,5,6,0,0,64,65,3,6,3,0,65,5,1,0,0,0,66,
-        67,7,0,0,0,67,7,1,0,0,0,68,69,5,7,0,0,69,70,5,36,0,0,70,71,5,8,0,
-        0,71,75,3,12,6,0,72,74,3,10,5,0,73,72,1,0,0,0,74,77,1,0,0,0,75,73,
-        1,0,0,0,75,76,1,0,0,0,76,78,1,0,0,0,77,75,1,0,0,0,78,79,5,9,0,0,
-        79,9,1,0,0,0,80,81,5,10,0,0,81,99,3,12,6,0,82,83,5,11,0,0,83,99,
-        3,12,6,0,84,85,5,12,0,0,85,99,3,12,6,0,86,87,5,13,0,0,87,99,3,12,
-        6,0,88,89,5,14,0,0,89,99,3,12,6,0,90,91,5,15,0,0,91,99,3,12,6,0,
-        92,93,5,16,0,0,93,99,3,12,6,0,94,95,5,17,0,0,95,99,3,12,6,0,96,97,
-        5,18,0,0,97,99,3,12,6,0,98,80,1,0,0,0,98,82,1,0,0,0,98,84,1,0,0,
-        0,98,86,1,0,0,0,98,88,1,0,0,0,98,90,1,0,0,0,98,92,1,0,0,0,98,94,
-        1,0,0,0,98,96,1,0,0,0,99,11,1,0,0,0,100,101,7,0,0,0,101,13,1,0,0,
-        0,102,103,5,3,0,0,103,104,7,1,0,0,104,15,1,0,0,0,105,106,5,19,0,
-        0,106,110,3,12,6,0,107,109,3,2,1,0,108,107,1,0,0,0,109,112,1,0,0,
-        0,110,108,1,0,0,0,110,111,1,0,0,0,111,120,1,0,0,0,112,110,1,0,0,
-        0,113,117,5,20,0,0,114,116,3,2,1,0,115,114,1,0,0,0,116,119,1,0,0,
-        0,117,115,1,0,0,0,117,118,1,0,0,0,118,121,1,0,0,0,119,117,1,0,0,
-        0,120,113,1,0,0,0,120,121,1,0,0,0,121,122,1,0,0,0,122,123,5,21,0,
-        0,123,17,1,0,0,0,124,125,5,22,0,0,125,129,3,12,6,0,126,128,3,2,1,
-        0,127,126,1,0,0,0,128,131,1,0,0,0,129,127,1,0,0,0,129,130,1,0,0,
-        0,130,132,1,0,0,0,131,129,1,0,0,0,132,133,5,23,0,0,133,19,1,0,0,
-        0,134,135,5,24,0,0,135,139,5,36,0,0,136,138,3,22,11,0,137,136,1,
-        0,0,0,138,141,1,0,0,0,139,137,1,0,0,0,139,140,1,0,0,0,140,143,1,
-        0,0,0,141,139,1,0,0,0,142,144,5,25,0,0,143,142,1,0,0,0,143,144,1,
-        0,0,0,144,148,1,0,0,0,145,147,3,2,1,0,146,145,1,0,0,0,147,150,1,
-        0,0,0,148,146,1,0,0,0,148,149,1,0,0,0,149,152,1,0,0,0,150,148,1,
-        0,0,0,151,153,3,24,12,0,152,151,1,0,0,0,152,153,1,0,0,0,153,154,
-        1,0,0,0,154,155,5,28,0,0,155,21,1,0,0,0,156,157,5,26,0,0,157,158,
-        5,36,0,0,158,23,1,0,0,0,159,161,5,27,0,0,160,162,3,12,6,0,161,160,
-        1,0,0,0,161,162,1,0,0,0,162,25,1,0,0,0,163,164,5,29,0,0,164,168,
-        5,36,0,0,165,167,3,12,6,0,166,165,1,0,0,0,167,170,1,0,0,0,168,166,
-        1,0,0,0,168,169,1,0,0,0,169,27,1,0,0,0,170,168,1,0,0,0,171,172,5,
-        30,0,0,172,173,5,36,0,0,173,174,5,29,0,0,174,178,7,2,0,0,175,177,
-        3,12,6,0,176,175,1,0,0,0,177,180,1,0,0,0,178,176,1,0,0,0,178,179,
-        1,0,0,0,179,29,1,0,0,0,180,178,1,0,0,0,17,33,40,47,59,75,98,110,
-        117,120,129,139,143,148,152,161,168,178
+        1,1,1,1,1,1,1,1,1,1,1,1,1,3,1,61,8,1,1,2,1,2,1,2,1,2,1,2,1,3,1,3,
+        1,4,1,4,1,4,1,4,1,4,5,4,75,8,4,10,4,12,4,78,9,4,1,4,1,4,1,5,1,5,
+        1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,
+        3,5,100,8,5,1,6,1,6,1,7,1,7,1,7,1,8,1,8,1,8,5,8,110,8,8,10,8,12,
+        8,113,9,8,1,8,1,8,5,8,117,8,8,10,8,12,8,120,9,8,3,8,122,8,8,1,8,
+        1,8,1,9,1,9,1,9,5,9,129,8,9,10,9,12,9,132,9,9,1,9,1,9,1,10,1,10,
+        1,10,5,10,139,8,10,10,10,12,10,142,9,10,1,10,3,10,145,8,10,1,10,
+        5,10,148,8,10,10,10,12,10,151,9,10,1,10,1,10,1,11,1,11,1,11,1,12,
+        1,12,3,12,160,8,12,1,13,1,13,1,13,5,13,165,8,13,10,13,12,13,168,
+        9,13,1,14,1,14,1,14,1,14,1,14,5,14,175,8,14,10,14,12,14,178,9,14,
+        1,14,0,0,15,0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,0,3,3,0,31,32,
+        34,34,36,36,1,0,34,36,2,0,4,4,36,36,193,0,33,1,0,0,0,2,60,1,0,0,
+        0,4,62,1,0,0,0,6,67,1,0,0,0,8,69,1,0,0,0,10,99,1,0,0,0,12,101,1,
+        0,0,0,14,103,1,0,0,0,16,106,1,0,0,0,18,125,1,0,0,0,20,135,1,0,0,
+        0,22,154,1,0,0,0,24,157,1,0,0,0,26,161,1,0,0,0,28,169,1,0,0,0,30,
+        32,3,20,10,0,31,30,1,0,0,0,32,35,1,0,0,0,33,31,1,0,0,0,33,34,1,0,
+        0,0,34,36,1,0,0,0,35,33,1,0,0,0,36,40,5,1,0,0,37,39,3,2,1,0,38,37,
+        1,0,0,0,39,42,1,0,0,0,40,38,1,0,0,0,40,41,1,0,0,0,41,43,1,0,0,0,
+        42,40,1,0,0,0,43,47,5,2,0,0,44,46,3,20,10,0,45,44,1,0,0,0,46,49,
+        1,0,0,0,47,45,1,0,0,0,47,48,1,0,0,0,48,50,1,0,0,0,49,47,1,0,0,0,
+        50,51,5,0,0,1,51,1,1,0,0,0,52,61,3,4,2,0,53,61,3,8,4,0,54,61,3,14,
+        7,0,55,61,3,16,8,0,56,61,3,18,9,0,57,61,3,26,13,0,58,61,3,28,14,
+        0,59,61,3,24,12,0,60,52,1,0,0,0,60,53,1,0,0,0,60,54,1,0,0,0,60,55,
+        1,0,0,0,60,56,1,0,0,0,60,57,1,0,0,0,60,58,1,0,0,0,60,59,1,0,0,0,
+        61,3,1,0,0,0,62,63,5,5,0,0,63,64,5,36,0,0,64,65,5,6,0,0,65,66,3,
+        6,3,0,66,5,1,0,0,0,67,68,7,0,0,0,68,7,1,0,0,0,69,70,5,7,0,0,70,71,
+        5,36,0,0,71,72,5,8,0,0,72,76,3,12,6,0,73,75,3,10,5,0,74,73,1,0,0,
+        0,75,78,1,0,0,0,76,74,1,0,0,0,76,77,1,0,0,0,77,79,1,0,0,0,78,76,
+        1,0,0,0,79,80,5,9,0,0,80,9,1,0,0,0,81,82,5,10,0,0,82,100,3,12,6,
+        0,83,84,5,11,0,0,84,100,3,12,6,0,85,86,5,12,0,0,86,100,3,12,6,0,
+        87,88,5,13,0,0,88,100,3,12,6,0,89,90,5,14,0,0,90,100,3,12,6,0,91,
+        92,5,15,0,0,92,100,3,12,6,0,93,94,5,16,0,0,94,100,3,12,6,0,95,96,
+        5,17,0,0,96,100,3,12,6,0,97,98,5,18,0,0,98,100,3,12,6,0,99,81,1,
+        0,0,0,99,83,1,0,0,0,99,85,1,0,0,0,99,87,1,0,0,0,99,89,1,0,0,0,99,
+        91,1,0,0,0,99,93,1,0,0,0,99,95,1,0,0,0,99,97,1,0,0,0,100,11,1,0,
+        0,0,101,102,7,0,0,0,102,13,1,0,0,0,103,104,5,3,0,0,104,105,7,1,0,
+        0,105,15,1,0,0,0,106,107,5,19,0,0,107,111,3,12,6,0,108,110,3,2,1,
+        0,109,108,1,0,0,0,110,113,1,0,0,0,111,109,1,0,0,0,111,112,1,0,0,
+        0,112,121,1,0,0,0,113,111,1,0,0,0,114,118,5,20,0,0,115,117,3,2,1,
+        0,116,115,1,0,0,0,117,120,1,0,0,0,118,116,1,0,0,0,118,119,1,0,0,
+        0,119,122,1,0,0,0,120,118,1,0,0,0,121,114,1,0,0,0,121,122,1,0,0,
+        0,122,123,1,0,0,0,123,124,5,21,0,0,124,17,1,0,0,0,125,126,5,22,0,
+        0,126,130,3,12,6,0,127,129,3,2,1,0,128,127,1,0,0,0,129,132,1,0,0,
+        0,130,128,1,0,0,0,130,131,1,0,0,0,131,133,1,0,0,0,132,130,1,0,0,
+        0,133,134,5,23,0,0,134,19,1,0,0,0,135,136,5,24,0,0,136,140,5,36,
+        0,0,137,139,3,22,11,0,138,137,1,0,0,0,139,142,1,0,0,0,140,138,1,
+        0,0,0,140,141,1,0,0,0,141,144,1,0,0,0,142,140,1,0,0,0,143,145,5,
+        25,0,0,144,143,1,0,0,0,144,145,1,0,0,0,145,149,1,0,0,0,146,148,3,
+        2,1,0,147,146,1,0,0,0,148,151,1,0,0,0,149,147,1,0,0,0,149,150,1,
+        0,0,0,150,152,1,0,0,0,151,149,1,0,0,0,152,153,5,28,0,0,153,21,1,
+        0,0,0,154,155,5,26,0,0,155,156,5,36,0,0,156,23,1,0,0,0,157,159,5,
+        27,0,0,158,160,3,12,6,0,159,158,1,0,0,0,159,160,1,0,0,0,160,25,1,
+        0,0,0,161,162,5,29,0,0,162,166,5,36,0,0,163,165,3,12,6,0,164,163,
+        1,0,0,0,165,168,1,0,0,0,166,164,1,0,0,0,166,167,1,0,0,0,167,27,1,
+        0,0,0,168,166,1,0,0,0,169,170,5,30,0,0,170,171,5,36,0,0,171,172,
+        5,29,0,0,172,176,7,2,0,0,173,175,3,12,6,0,174,173,1,0,0,0,175,178,
+        1,0,0,0,176,174,1,0,0,0,176,177,1,0,0,0,177,29,1,0,0,0,178,176,1,
+        0,0,0,16,33,40,47,60,76,99,111,118,121,130,140,144,149,159,166,176
     ]
 
 class ArnoldCParser ( Parser ):
@@ -241,7 +240,7 @@ class ArnoldCParser ( Parser ):
             self.state = 40
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 1615331496) != 0):
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 1749549224) != 0):
                 self.state = 37
                 self.statement()
                 self.state = 42
@@ -306,6 +305,10 @@ class ArnoldCParser ( Parser ):
             return self.getTypedRuleContext(ArnoldCParser.FuncCallAssignStmtContext,0)
 
 
+        def returnStmt(self):
+            return self.getTypedRuleContext(ArnoldCParser.ReturnStmtContext,0)
+
+
         def getRuleIndex(self):
             return ArnoldCParser.RULE_statement
 
@@ -323,7 +326,7 @@ class ArnoldCParser ( Parser ):
         localctx = ArnoldCParser.StatementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 2, self.RULE_statement)
         try:
-            self.state = 59
+            self.state = 60
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [5]:
@@ -360,6 +363,11 @@ class ArnoldCParser ( Parser ):
                 self.enterOuterAlt(localctx, 7)
                 self.state = 58
                 self.funcCallAssignStmt()
+                pass
+            elif token in [27]:
+                self.enterOuterAlt(localctx, 8)
+                self.state = 59
+                self.returnStmt()
                 pass
             else:
                 raise NoViableAltException(self)
@@ -411,13 +419,13 @@ class ArnoldCParser ( Parser ):
         self.enterRule(localctx, 4, self.RULE_declaration)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 61
-            self.match(ArnoldCParser.DECLARE)
             self.state = 62
-            self.match(ArnoldCParser.IDENTIFIER)
+            self.match(ArnoldCParser.DECLARE)
             self.state = 63
-            self.match(ArnoldCParser.SET_INIT)
+            self.match(ArnoldCParser.IDENTIFIER)
             self.state = 64
+            self.match(ArnoldCParser.SET_INIT)
+            self.state = 65
             self.initValue()
         except RecognitionException as re:
             localctx.exception = re
@@ -466,7 +474,7 @@ class ArnoldCParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 66
+            self.state = 67
             _la = self._input.LA(1)
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 92341796864) != 0)):
                 self._errHandler.recoverInline(self)
@@ -531,25 +539,25 @@ class ArnoldCParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 68
-            self.match(ArnoldCParser.ASSIGN_VAR_START)
             self.state = 69
-            self.match(ArnoldCParser.IDENTIFIER)
+            self.match(ArnoldCParser.ASSIGN_VAR_START)
             self.state = 70
-            self.match(ArnoldCParser.ASSIGN_VAR_VALUE)
+            self.match(ArnoldCParser.IDENTIFIER)
             self.state = 71
+            self.match(ArnoldCParser.ASSIGN_VAR_VALUE)
+            self.state = 72
             self.operand()
-            self.state = 75
+            self.state = 76
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while (((_la) & ~0x3f) == 0 and ((1 << _la) & 523264) != 0):
-                self.state = 72
+                self.state = 73
                 self.operation()
-                self.state = 77
+                self.state = 78
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 78
+            self.state = 79
             self.match(ArnoldCParser.ASSIGN_VAR_END)
         except RecognitionException as re:
             localctx.exception = re
@@ -615,70 +623,70 @@ class ArnoldCParser ( Parser ):
         localctx = ArnoldCParser.OperationContext(self, self._ctx, self.state)
         self.enterRule(localctx, 10, self.RULE_operation)
         try:
-            self.state = 98
+            self.state = 99
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [10]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 80
-                self.match(ArnoldCParser.ADD)
                 self.state = 81
+                self.match(ArnoldCParser.ADD)
+                self.state = 82
                 self.operand()
                 pass
             elif token in [11]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 82
-                self.match(ArnoldCParser.SUB)
                 self.state = 83
+                self.match(ArnoldCParser.SUB)
+                self.state = 84
                 self.operand()
                 pass
             elif token in [12]:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 84
-                self.match(ArnoldCParser.MUL)
                 self.state = 85
+                self.match(ArnoldCParser.MUL)
+                self.state = 86
                 self.operand()
                 pass
             elif token in [13]:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 86
-                self.match(ArnoldCParser.DIV)
                 self.state = 87
+                self.match(ArnoldCParser.DIV)
+                self.state = 88
                 self.operand()
                 pass
             elif token in [14]:
                 self.enterOuterAlt(localctx, 5)
-                self.state = 88
-                self.match(ArnoldCParser.MOD)
                 self.state = 89
+                self.match(ArnoldCParser.MOD)
+                self.state = 90
                 self.operand()
                 pass
             elif token in [15]:
                 self.enterOuterAlt(localctx, 6)
-                self.state = 90
-                self.match(ArnoldCParser.EQ)
                 self.state = 91
+                self.match(ArnoldCParser.EQ)
+                self.state = 92
                 self.operand()
                 pass
             elif token in [16]:
                 self.enterOuterAlt(localctx, 7)
-                self.state = 92
-                self.match(ArnoldCParser.GT)
                 self.state = 93
+                self.match(ArnoldCParser.GT)
+                self.state = 94
                 self.operand()
                 pass
             elif token in [17]:
                 self.enterOuterAlt(localctx, 8)
-                self.state = 94
-                self.match(ArnoldCParser.AND)
                 self.state = 95
+                self.match(ArnoldCParser.AND)
+                self.state = 96
                 self.operand()
                 pass
             elif token in [18]:
                 self.enterOuterAlt(localctx, 9)
-                self.state = 96
-                self.match(ArnoldCParser.OR)
                 self.state = 97
+                self.match(ArnoldCParser.OR)
+                self.state = 98
                 self.operand()
                 pass
             else:
@@ -731,7 +739,7 @@ class ArnoldCParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 100
+            self.state = 101
             _la = self._input.LA(1)
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 92341796864) != 0)):
                 self._errHandler.recoverInline(self)
@@ -785,9 +793,9 @@ class ArnoldCParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 102
-            self.match(ArnoldCParser.PRINT)
             self.state = 103
+            self.match(ArnoldCParser.PRINT)
+            self.state = 104
             _la = self._input.LA(1)
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 120259084288) != 0)):
                 self._errHandler.recoverInline(self)
@@ -849,39 +857,39 @@ class ArnoldCParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 105
-            self.match(ArnoldCParser.IF)
             self.state = 106
+            self.match(ArnoldCParser.IF)
+            self.state = 107
             self.operand()
-            self.state = 110
+            self.state = 111
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 1615331496) != 0):
-                self.state = 107
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 1749549224) != 0):
+                self.state = 108
                 self.statement()
-                self.state = 112
+                self.state = 113
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 120
+            self.state = 121
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==20:
-                self.state = 113
+                self.state = 114
                 self.match(ArnoldCParser.ELSE)
-                self.state = 117
+                self.state = 118
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while (((_la) & ~0x3f) == 0 and ((1 << _la) & 1615331496) != 0):
-                    self.state = 114
+                while (((_la) & ~0x3f) == 0 and ((1 << _la) & 1749549224) != 0):
+                    self.state = 115
                     self.statement()
-                    self.state = 119
+                    self.state = 120
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
 
 
 
-            self.state = 122
+            self.state = 123
             self.match(ArnoldCParser.ENDIF)
         except RecognitionException as re:
             localctx.exception = re
@@ -935,21 +943,21 @@ class ArnoldCParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 124
-            self.match(ArnoldCParser.WHILE)
             self.state = 125
+            self.match(ArnoldCParser.WHILE)
+            self.state = 126
             self.operand()
-            self.state = 129
+            self.state = 130
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 1615331496) != 0):
-                self.state = 126
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 1749549224) != 0):
+                self.state = 127
                 self.statement()
-                self.state = 131
+                self.state = 132
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 132
+            self.state = 133
             self.match(ArnoldCParser.ENDWHILE)
         except RecognitionException as re:
             localctx.exception = re
@@ -993,10 +1001,6 @@ class ArnoldCParser ( Parser ):
                 return self.getTypedRuleContext(ArnoldCParser.StatementContext,i)
 
 
-        def returnStmt(self):
-            return self.getTypedRuleContext(ArnoldCParser.ReturnStmtContext,0)
-
-
         def getRuleIndex(self):
             return ArnoldCParser.RULE_funcDecl
 
@@ -1016,47 +1020,39 @@ class ArnoldCParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 134
-            self.match(ArnoldCParser.FUNC_START)
             self.state = 135
+            self.match(ArnoldCParser.FUNC_START)
+            self.state = 136
             self.match(ArnoldCParser.IDENTIFIER)
-            self.state = 139
+            self.state = 140
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==26:
-                self.state = 136
+                self.state = 137
                 self.funcArg()
-                self.state = 141
+                self.state = 142
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 143
+            self.state = 144
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==25:
-                self.state = 142
+                self.state = 143
                 self.match(ArnoldCParser.FUNC_NONVOID)
 
 
-            self.state = 148
+            self.state = 149
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 1615331496) != 0):
-                self.state = 145
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 1749549224) != 0):
+                self.state = 146
                 self.statement()
-                self.state = 150
+                self.state = 151
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
             self.state = 152
-            self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            if _la==27:
-                self.state = 151
-                self.returnStmt()
-
-
-            self.state = 154
             self.match(ArnoldCParser.FUNC_END)
         except RecognitionException as re:
             localctx.exception = re
@@ -1098,9 +1094,9 @@ class ArnoldCParser ( Parser ):
         self.enterRule(localctx, 22, self.RULE_funcArg)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 156
+            self.state = 154
             self.match(ArnoldCParser.FUNC_ARGS)
-            self.state = 157
+            self.state = 155
             self.match(ArnoldCParser.IDENTIFIER)
         except RecognitionException as re:
             localctx.exception = re
@@ -1144,13 +1140,13 @@ class ArnoldCParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 159
+            self.state = 157
             self.match(ArnoldCParser.RETURN)
-            self.state = 161
+            self.state = 159
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if (((_la) & ~0x3f) == 0 and ((1 << _la) & 92341796864) != 0):
-                self.state = 160
+                self.state = 158
                 self.operand()
 
 
@@ -1202,17 +1198,17 @@ class ArnoldCParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 163
+            self.state = 161
             self.match(ArnoldCParser.CALL)
-            self.state = 164
+            self.state = 162
             self.match(ArnoldCParser.IDENTIFIER)
-            self.state = 168
+            self.state = 166
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while (((_la) & ~0x3f) == 0 and ((1 << _la) & 92341796864) != 0):
-                self.state = 165
+                self.state = 163
                 self.operand()
-                self.state = 170
+                self.state = 168
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -1273,26 +1269,26 @@ class ArnoldCParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 171
+            self.state = 169
             self.match(ArnoldCParser.CALL_ASSIGN)
-            self.state = 172
+            self.state = 170
             self.match(ArnoldCParser.IDENTIFIER)
-            self.state = 173
+            self.state = 171
             self.match(ArnoldCParser.CALL)
-            self.state = 174
+            self.state = 172
             _la = self._input.LA(1)
             if not(_la==4 or _la==36):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
                 self.consume()
-            self.state = 178
+            self.state = 176
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while (((_la) & ~0x3f) == 0 and ((1 << _la) & 92341796864) != 0):
-                self.state = 175
+                self.state = 173
                 self.operand()
-                self.state = 180
+                self.state = 178
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 

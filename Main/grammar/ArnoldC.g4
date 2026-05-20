@@ -18,6 +18,7 @@ statement
     | whileStmt
     | funcCallStmt
     | funcCallAssignStmt
+    | returnStmt
     ;
 
 // =======================
@@ -114,7 +115,6 @@ funcDecl
       funcArg*
       FUNC_NONVOID?
       statement*
-      returnStmt?
       FUNC_END
     ;
 
@@ -195,7 +195,7 @@ ERROR_TOKEN : 'WHAT THE FUCK DID I DO WRONG' ;
 // =======================
 // LITERAŁY
 // =======================
-NUMBER      : [0-9]+ ;
+NUMBER : '-'? [0-9]+ ;
 STRING      : '"' (~["\r\n])* '"' ;
 IDENTIFIER  : [a-zA-Z_][a-zA-Z0-9_]* ;
 

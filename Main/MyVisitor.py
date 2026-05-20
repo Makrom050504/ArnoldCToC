@@ -18,7 +18,7 @@ class MyVisitor(ArnoldCVisitor):
         Gramatyka: operand : NUMBER | IDENTIFIER | TRUE | FALSE ;
         """
         if ctx is None:
-            return "0"
+            raise Exception("Missing value")
         if ctx.TRUE() is not None:
             return "1"
         if ctx.FALSE() is not None:
@@ -134,16 +134,14 @@ class MyVisitor(ArnoldCVisitor):
         self._emit(f"if ({condition}) {{")
         self._indent += 1
 
-        in_else = False
         for i in range(ctx.getChildCount()):
             child = ctx.getChild(i)
-            # TerminalNode nie ma klasy kończącej się na "Context"
+            #jeśli child jest terminal nodem to napotkalismy else
             if child.__class__.__name__ == "TerminalNodeImpl":
-                if child.getText() == ctx.ELSE().getText() if ctx.ELSE() is not None else False:
+                if ctx.ELSE() is not None and child.getText() == ctx.ELSE().getText():
                     self._indent -= 1
                     self._emit("} else {")
                     self._indent += 1
-                    in_else = True
             elif child.__class__.__name__ == "StatementContext":
                 self.visit(child)
 
@@ -179,15 +177,12 @@ class MyVisitor(ArnoldCVisitor):
         func_name = ctx.IDENTIFIER().getText()
         params = [arg.IDENTIFIER().getText() for arg in ctx.funcArg()]
         ret_type = "int" if ctx.FUNC_NONVOID() is not None else "void"
-        # Użyto 'p' żeby nie shadować zmiennej func_name
         param_list = ", ".join(f"int {p}" for p in params)
 
         self._emit(f"{ret_type} {func_name}({param_list}) {{")
         self._indent += 1
         for stmt in ctx.statement():
             self.visit(stmt)
-        if ctx.returnStmt() is not None:
-            self.visit(ctx.returnStmt())
         self._indent -= 1
         self._emit("}")
         return None
