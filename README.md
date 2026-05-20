@@ -164,3 +164,403 @@ ANTLR4
 
 
 
+
+## Pełna gramatyka formatu
+
+Poniżej znajduje się gramatyka języka ArnoldC obsługiwanego przez projekt, zapisana w notacji generatora ANTLR4. Gramatyka nie zawiera akcji semantycznych — opisuje wyłącznie strukturę składniową języka.
+
+```antlr
+grammar ArnoldC;
+
+program
+    : funcDecl* START statement* END funcDecl* EOF
+    ;
+
+statement
+    : declaration
+    | assignment
+    | printStmt
+    | ifStmt
+    | whileStmt
+    | funcCallStmt
+    | funcCallAssignStmt
+    ;
+
+declaration
+    : DECLARE IDENTIFIER SET_INIT initValue
+    ;
+
+initValue
+    : NUMBER
+    | IDENTIFIER
+    | TRUE
+    | FALSE
+    ;
+
+assignment
+    : ASSIGN_VAR_START IDENTIFIER
+      ASSIGN_VAR_VALUE operand
+      operation*
+      ASSIGN_VAR_END
+    ;
+
+operation
+    : ADD operand
+    | SUB operand
+    | MUL operand
+    | DIV operand
+    | MOD operand
+    | EQ  operand
+    | GT  operand
+    | AND operand
+    | OR  operand
+    ;
+
+operand
+    : NUMBER
+    | IDENTIFIER
+    | TRUE
+    | FALSE
+    ;
+
+printStmt
+    : PRINT (STRING | IDENTIFIER | NUMBER)
+    ;
+
+ifStmt
+    : IF operand
+      statement*
+      (ELSE statement*)?
+      ENDIF
+    ;
+
+whileStmt
+    : WHILE operand
+      statement*
+      ENDWHILE
+    ;
+
+funcDecl
+    : FUNC_START IDENTIFIER
+      funcArg*
+      FUNC_NONVOID?
+      statement*
+      returnStmt?
+      FUNC_END
+    ;
+
+funcArg
+    : FUNC_ARGS IDENTIFIER
+    ;
+
+returnStmt
+    : RETURN operand?
+    ;
+
+funcCallStmt
+    : CALL IDENTIFIER operand*
+    ;
+
+funcCallAssignStmt
+    : CALL_ASSIGN IDENTIFIER
+      CALL (IDENTIFIER | READ) operand*
+    ;
+
+START       : 'IT\'S SHOWTIME' ;
+END         : 'YOU HAVE BEEN TERMINATED' ;
+
+PRINT       : 'TALK TO THE HAND' ;
+READ        : 'I WANT TO ASK YOU A BUNCH OF QUESTIONS AND I WANT TO HAVE THEM ANSWERED IMMEDIATELY' ;
+
+DECLARE     : 'HEY CHRISTMAS TREE' ;
+SET_INIT    : 'YOU SET US UP' ;
+
+ASSIGN_VAR_START : 'GET TO THE CHOPPER' ;
+ASSIGN_VAR_VALUE : 'HERE IS MY INVITATION' ;
+ASSIGN_VAR_END   : 'ENOUGH TALK' ;
+
+ADD  : 'GET UP' ;
+SUB  : 'GET DOWN' ;
+MUL  : 'YOU\'RE FIRED' ;
+DIV  : 'HE HAD TO SPLIT' ;
+MOD  : 'I LET HIM GO' ;
+
+EQ   : 'YOU ARE NOT YOU YOU ARE ME' ;
+GT   : 'LET OFF SOME STEAM BENNET' ;
+AND  : 'KNOCK KNOCK' ;
+OR   : 'CONSIDER THAT A DIVORCE' ;
+
+IF      : 'BECAUSE I\'M GOING TO SAY PLEASE' ;
+ELSE    : 'BULLSHIT' ;
+ENDIF   : 'YOU HAVE NO RESPECT FOR LOGIC' ;
+
+WHILE    : 'STICK AROUND' ;
+ENDWHILE : 'CHILL' ;
+
+FUNC_START   : 'LISTEN TO ME VERY CAREFULLY' ;
+FUNC_NONVOID : 'GIVE THESE PEOPLE AIR' ;
+FUNC_ARGS    : 'I NEED YOUR CLOTHES YOUR BOOTS AND YOUR MOTORCYCLE' ;
+RETURN       : 'I\'LL BE BACK' ;
+FUNC_END     : 'HASTA LA VISTA, BABY' ;
+CALL         : 'DO IT NOW' ;
+CALL_ASSIGN  : 'GET YOUR ASS TO MARS' ;
+
+TRUE    : '@NO PROBLEMO' ;
+FALSE   : '@I LIED' ;
+
+ERROR_TOKEN : 'WHAT THE FUCK DID I DO WRONG' ;
+
+NUMBER      : [0-9]+ ;
+STRING      : '"' (~["\r\n])* '"' ;
+IDENTIFIER  : [a-zA-Z_][a-zA-Z0-9_]* ;
+
+WS : [ \t\r\n]+ -> skip ;
+```
+
+## Informacje o stosowanych generatorach i pakietach zewnętrznych
+
+Projekt wykorzystuje generator parserów i lekserów **ANTLR4**.
+
+ANTLR4 jest używany do:
+
+* zdefiniowania tokenów języka ArnoldC,
+* zdefiniowania gramatyki składniowej języka,
+* wygenerowania leksera,
+* wygenerowania parsera,
+* wygenerowania klasy bazowej visitora.
+
+W projekcie wykorzystywane są wygenerowane pliki znajdujące się w katalogu:
+
+```text
+Main/ANTLR4_generated/
+```
+
+Najważniejsze wygenerowane pliki to:
+
+```text
+ArnoldCLexer.py
+ArnoldCParser.py
+ArnoldCVisitor.py
+```
+
+Do obsługi drzewa składniowego wykorzystywany jest własny visitor:
+
+```text
+Main/MyVisitor.py
+```
+
+Program korzysta również z pakietu:
+
+```text
+antlr4-python3-runtime
+```
+
+Pakiet ten umożliwia uruchamianie parsera ANTLR4 w języku Python.
+
+## Krótka instrukcja obsługi
+
+### 1. Instalacja zależności
+
+Przed uruchomieniem programu należy zainstalować bibliotekę uruchomieniową ANTLR4 dla Pythona:
+
+```bash
+pip install antlr4-python3-runtime
+```
+
+### 2. Struktura najważniejszych plików
+
+```text
+Main/
+├── compiler.py
+├── MyVisitor.py
+├── grammar/
+│   └── ArnoldC.g4
+├── ANTLR4_generated/
+│   ├── ArnoldCLexer.py
+│   ├── ArnoldCParser.py
+│   └── ArnoldCVisitor.py
+└── Tests/
+    ├── test.arnoldc
+    └── test.modulo_func
+```
+
+### 3. Uruchomienie translatora
+
+Aby uruchomić kompilator, należy przejść do katalogu `Main` i uruchomić plik `compiler.py`:
+
+```bash
+cd Main
+python compiler.py
+```
+
+Program wczytuje plik testowy ArnoldC, parsuje go, odwiedza wygenerowane drzewo składniowe i zapisuje wynikowy kod C do pliku:
+
+```text
+out.c
+```
+
+### 4. Kompilacja wygenerowanego kodu C
+
+Po wygenerowaniu pliku `out.c` można skompilować go standardowym kompilatorem języka C, na przykład `gcc`:
+
+```bash
+gcc out.c -o out
+```
+
+Następnie można uruchomić program wynikowy:
+
+```bash
+./out
+```
+
+W systemie Windows przykładowe uruchomienie może wyglądać następująco:
+
+```bash
+gcc out.c -o out.exe
+out.exe
+```
+
+## Przykład użycia
+
+Przykładowy program w języku ArnoldC:
+
+```text
+IT'S SHOWTIME
+HEY CHRISTMAS TREE n
+YOU SET US UP 0
+GET TO THE CHOPPER n
+HERE IS MY INVITATION n
+GET UP 5
+ENOUGH TALK
+TALK TO THE HAND n
+YOU HAVE BEEN TERMINATED
+```
+
+Znaczenie programu:
+
+* rozpoczęcie programu,
+* zadeklarowanie zmiennej `n`,
+* przypisanie jej wartości początkowej `0`,
+* wykonanie operacji `n = n + 5`,
+* wypisanie wartości zmiennej `n`,
+* zakończenie programu.
+
+Przykładowy kod C wygenerowany przez translator:
+
+```c
+#include <stdio.h>
+
+int main() {
+    int n = 0;
+    n = n + 5;
+    printf("%d\n", n);
+    return 0;
+}
+```
+
+Przykładowy wynik działania programu:
+
+```text
+5
+```
+
+## Opis działania translatora
+
+Translator działa w kilku etapach:
+
+1. Wczytanie pliku źródłowego napisanego w języku ArnoldC.
+2. Przekazanie kodu wejściowego do leksera wygenerowanego przez ANTLR4.
+3. Zamiana kodu źródłowego na strumień tokenów.
+4. Przekazanie tokenów do parsera wygenerowanego przez ANTLR4.
+5. Zbudowanie drzewa składniowego programu.
+6. Przejście po drzewie składniowym za pomocą klasy `MyVisitor`.
+7. Generowanie odpowiadającego kodu w języku C.
+8. Zapisanie kodu wynikowego do pliku `out.c`.
+
+## Obsługiwane elementy języka
+
+Aktualna wersja translatora obsługuje:
+
+* strukturę programu ArnoldC,
+* deklaracje zmiennych całkowitych,
+* inicjalizację zmiennych,
+* przypisania,
+* operacje arytmetyczne:
+  * dodawanie,
+  * odejmowanie,
+  * mnożenie,
+  * dzielenie,
+  * modulo,
+* operacje logiczne i porównania:
+  * równość,
+  * większość,
+  * koniunkcję,
+  * alternatywę,
+* wypisywanie wartości na standardowe wyjście,
+* instrukcje warunkowe `if` oraz `else`,
+* pętle `while`,
+* funkcje,
+* argumenty funkcji,
+* zwracanie wartości z funkcji,
+* wywołania funkcji,
+* przypisanie wyniku funkcji do zmiennej,
+* prostą obsługę wejścia z użyciem funkcji `scanf`.
+
+## Ograniczenia programu
+
+W obecnej wersji translatora przyjęto następujące uproszczenia:
+
+* wszystkie zmienne są tłumaczone jako typ `int`,
+* wartości logiczne są reprezentowane jako liczby całkowite:
+  * `@NO PROBLEMO` jako `1`,
+  * `@I LIED` jako `0`,
+* warunki w instrukcjach `if` i `while` są pojedynczymi operandami,
+* bardziej złożone wyrażenia należy wcześniej obliczyć w instrukcji przypisania,
+* obsługiwane są liczby całkowite,
+* literały tekstowe są obsługiwane tylko w instrukcji wypisywania,
+* wygenerowany kod C wymaga dalszej kompilacji z użyciem zewnętrznego kompilatora, np. `gcc`.
+
+## Przykład funkcji
+
+Przykładowa funkcja w języku ArnoldC:
+
+```text
+LISTEN TO ME VERY CAREFULLY modulo
+I NEED YOUR CLOTHES YOUR BOOTS AND YOUR MOTORCYCLE dividend
+I NEED YOUR CLOTHES YOUR BOOTS AND YOUR MOTORCYCLE divisor
+GIVE THESE PEOPLE AIR
+HEY CHRISTMAS TREE quotient
+YOU SET US UP 0
+HEY CHRISTMAS TREE remainder
+YOU SET US UP 0
+HEY CHRISTMAS TREE product
+YOU SET US UP 0
+GET TO THE CHOPPER quotient
+HERE IS MY INVITATION dividend
+HE HAD TO SPLIT divisor
+ENOUGH TALK
+GET TO THE CHOPPER product
+HERE IS MY INVITATION divisor
+YOU'RE FIRED quotient
+ENOUGH TALK
+GET TO THE CHOPPER remainder
+HERE IS MY INVITATION dividend
+GET DOWN product
+ENOUGH TALK
+I'LL BE BACK remainder
+HASTA LA VISTA, BABY
+```
+
+Odpowiadający kod w języku C:
+
+```c
+int modulo(int dividend, int divisor) {
+    int quotient = 0;
+    int remainder = 0;
+    int product = 0;
+    quotient = dividend / divisor;
+    product = divisor * quotient;
+    remainder = dividend - product;
+    return remainder;
+}
+```
