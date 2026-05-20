@@ -2,7 +2,7 @@ import argparse
 import subprocess
 import sys
 
-from MyVisitor import MyVisitor
+from ArnoldCtoCVisitor import ArnoldCtoCVisitor
 from antlr4 import CommonTokenStream, FileStream
 from ANTLR4_generated.ArnoldCLexer import ArnoldCLexer
 from ANTLR4_generated.ArnoldCParser import ArnoldCParser
@@ -27,7 +27,7 @@ def main():
         sys.exit(1)
 
     # generacja C
-    visitor = MyVisitor()
+    visitor = ArnoldCtoCVisitor()
     c_code = visitor.visit(tree)
 
     with open(args.output, "w") as f:

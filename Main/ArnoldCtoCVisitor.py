@@ -1,7 +1,7 @@
 from ANTLR4_generated.ArnoldCVisitor import ArnoldCVisitor
 
 
-class MyVisitor(ArnoldCVisitor):
+class ArnoldCtoCVisitor(ArnoldCVisitor):
     def __init__(self):
         self.output = []
         self._indent = 0
