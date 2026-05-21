@@ -184,6 +184,7 @@ statement
     | whileStmt
     | funcCallStmt
     | funcCallAssignStmt
+    | returnStmt
     ;
 
 declaration
@@ -245,7 +246,6 @@ funcDecl
       funcArg*
       FUNC_NONVOID?
       statement*
-      returnStmt?
       FUNC_END
     ;
 
@@ -346,7 +346,7 @@ ArnoldCVisitor.py
 Do obsługi drzewa składniowego wykorzystywany jest własny visitor:
 
 ```text
-Main/MyVisitor.py
+Main/ArnoldCToCVisitor.py
 ```
 
 Program korzysta również z pakietu:
@@ -371,8 +371,8 @@ pip install antlr4-python3-runtime
 
 ```text
 Main/
-├── compiler.py
-├── MyVisitor.py
+├── main.py
+├── ArnoldCToCVisitor.py
 ├── grammar/
 │   └── ArnoldC.g4
 ├── ANTLR4_generated/
@@ -380,48 +380,52 @@ Main/
 │   ├── ArnoldCParser.py
 │   └── ArnoldCVisitor.py
 └── Tests/
-    ├── test.arnoldc
-    └── test.modulo_func
+    ├── input.arnoldc
+    ├── loops.arnoldc
+    ├── modulo_func.arnoldc
+    ├── operations.arnoldc
+    ├── recursion.arnoldc
 ```
 
 ### 3. Uruchomienie translatora
 
-Aby uruchomić kompilator, należy przejść do katalogu `Main` i uruchomić plik `compiler.py`:
+Aby uruchomić kompilator, należy przejść do katalogu `Main` i uruchomić plik `main.py`:
 
 ```bash
 cd Main
-python compiler.py
+python main.py input.arnoldc -o output.c
 ```
 
-Program wczytuje plik testowy ArnoldC, parsuje go, odwiedza wygenerowane drzewo składniowe i zapisuje wynikowy kod C do pliku:
+Dostępne flagi:
 
-```text
-out.c
-```
+| Flaga | Opis |
+|-------|------|
+| `input` | ścieżka do pliku wejściowego ArnoldC |
+| `-o`, `--output` | ścieżka do pliku wynikowego C (domyślnie: `out.c`) |
+| `--compile` | kompiluje wygenerowany kod C przez `gcc` |
+| `--run` | kompiluje i uruchamia wygenerowany program |
 
-### 4. Kompilacja wygenerowanego kodu C
+### 4. Kompilacja i uruchomienie
 
-Po wygenerowaniu pliku `out.c` można skompilować go standardowym kompilatorem języka C, na przykład `gcc`:
+Można kompilować i uruchamiać program ręcznie:
 
 ```bash
 gcc out.c -o out
-```
-
-Następnie można uruchomić program wynikowy:
-
-```bash
 ./out
 ```
 
-W systemie Windows przykładowe uruchomienie może wyglądać następująco:
+Lub skorzystać z flag `--compile` i `--run`, które robią to automatycznie:
 
 ```bash
-gcc out.c -o out.exe
-out.exe
+# kompilacja
+python main.py input.arnoldc --compile
+
+# kompilacja i uruchomienie
+python main.py input.arnoldc --run
 ```
 
 ## Przykład użycia
-
+(więcej przykładów zaznajamiających z językiem ArnoldC [ArnoldC](https://github.com/lhartikk/ArnoldC)
 Przykładowy program w języku ArnoldC:
 
 ```text
