@@ -479,7 +479,7 @@ Translator działa w kilku etapach:
 3. Zamiana kodu źródłowego na strumień tokenów.
 4. Przekazanie tokenów do parsera wygenerowanego przez ANTLR4.
 5. Zbudowanie drzewa składniowego programu.
-6. Przejście po drzewie składniowym za pomocą klasy `MyVisitor`.
+6. Przejście po drzewie składniowym za pomocą klasy `ArnoldCtoCVisitor`.
 7. Generowanie odpowiadającego kodu w języku C.
 8. Zapisanie kodu wynikowego do pliku `out.c`.
 
