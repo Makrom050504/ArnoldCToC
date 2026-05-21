@@ -425,7 +425,9 @@ python main.py input.arnoldc --run
 ```
 
 ## Przykład użycia
-(więcej przykładów zaznajamiających z językiem ArnoldC [ArnoldC](https://github.com/lhartikk/ArnoldC)
+(więcej przykładów zaznajamiających z językiem ArnoldC [ArnoldC](https://github.com/lhartikk/ArnoldC/wiki/ArnoldC)
+
+
 Przykładowy program w języku ArnoldC:
 
 ```text
