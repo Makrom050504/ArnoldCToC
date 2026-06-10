@@ -1,4 +1,5 @@
 import argparse
+import os
 import subprocess
 import sys
 
@@ -79,7 +80,7 @@ def main():
 
     # kompilacja
     if args.compile or args.run:
-        binary = args.output.replace(".c", "")
+        binary = os.path.splitext(args.output)[0]
         result = subprocess.run(["gcc", args.output, "-o", binary])
         if result.returncode != 0:
             print("Kompilacja wygenerowanego C nie powiodła się.")
@@ -87,7 +88,10 @@ def main():
         print(f"Compiled: {binary}")
 
         if args.run:
-            subprocess.run([f"./{binary}"])
+            run_path = binary
+            if not os.path.isabs(run_path) and os.path.dirname(run_path) == "":
+                run_path = f"./{run_path}"
+            subprocess.run([run_path])
 
 if __name__ == "__main__":
     main()
