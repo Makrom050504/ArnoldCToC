@@ -163,17 +163,17 @@ ANTLR4
 [ArnoldC.g4](Main/grammar/ArnoldC.g4)
 
 
+### Dodatkowa diagnostyka błędów
+
+Poza domyślną obsługą błędów ANTLR4 projekt zawiera dodatkowy moduł `ArnoldCDiagnostics.py`. Moduł ten przechwytuje błędy składniowe i leksykalne z ANTLR, formatując je w czytelniejszy sposób z numerem linii, kolumną, wskazaniem miejsca błędu oraz podpowiedzią.
+
+Dodatkowo po poprawnym parsowaniu wykonywana jest prosta analiza semantyczna programu. Wykrywa ona m.in. użycie niezadeklarowanych zmiennych, ponowne deklaracje, błędne wywołania funkcji, niepoprawne instrukcje `return` oraz dzielenie lub modulo przez literalne zero. Przykładowy plik testujący diagnostykę znajduje się w `Main/Tests/test.errors`.
 
 
 ## Pełna gramatyka formatu
 
 Poniżej znajduje się gramatyka języka ArnoldC obsługiwanego przez projekt, zapisana w notacji generatora ANTLR4. Gramatyka nie zawiera akcji semantycznych — opisuje wyłącznie strukturę składniową języka.
 
-### Dodatkowa diagnostyka błędów
-
-Poza domyślną obsługą błędów ANTLR4 projekt zawiera dodatkowy moduł `ArnoldCDiagnostics.py`. Moduł ten przechwytuje błędy składniowe i leksykalne z ANTLR, formatując je w czytelniejszy sposób z numerem linii, kolumną, wskazaniem miejsca błędu oraz podpowiedzią.
-
-Dodatkowo po poprawnym parsowaniu wykonywana jest prosta analiza semantyczna programu. Wykrywa ona m.in. użycie niezadeklarowanych zmiennych, ponowne deklaracje, błędne wywołania funkcji, niepoprawne instrukcje `return` oraz dzielenie lub modulo przez literalne zero. Przykładowy plik testujący diagnostykę znajduje się w `Main/Tests/test.errors`.
 
 ```antlr
 grammar ArnoldC;
