@@ -160,7 +160,7 @@ ANTLR4
 
 
 ### Plik: `ArnoldC.g4`
-[ArnoldC.g4](ArnoldC.g4)
+[ArnoldC.g4](Main/grammar/ArnoldC.g4)
 
 
 
